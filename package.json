@@ -7,7 +7,7 @@
     "test": "jest",
     "seeds": "node seeds/index.js",
     "start": "node server.js",
-    "watch":"nodemon server.js"
+    "watch": "nodemon server.js"
   },
   "dependencies": {
     "axios": "^0.21.4",
