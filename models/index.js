@@ -1,8 +1,10 @@
 //import all models
+const Client = require("./Client");
 const Appointment = require("./Appointment");
-const Doctor = require('./Doctor');
-const Client = require('./Client');
+const Doctor = require("./Doctor");
 
 //Create associations
-
-module.exports = { Appointment, Doctor, Client };
+Client.hasMany(Doctor, {
+  foreignKey: "client_id",
+});
+module.exports = { Client, Appointment, Doctor };

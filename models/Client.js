@@ -2,7 +2,12 @@ const { Model, DataTypes } = require("sequelize");
 const bcrypt = require("bcrypt");
 const sequelize = require("../config/connection");
 
-class Client extends Model {}
+class Client extends Model {
+  // set up method to run on instance data to check password
+  checkPassword(loginPw) {
+    return bcrypt.compareSync(loginPw, this.password);
+  }
+}
 
 //Fields/Columns for Client model
 Client.init(
@@ -68,3 +73,5 @@ Client.init(
     modelName: "client",
   }
 );
+
+module.exports = Client;
