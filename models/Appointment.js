@@ -20,6 +20,7 @@ Appointment.init(
       allowNull: false,
     },
     client_id: {
+      type: DataTypes.INTEGER,
       references: {
         model: "client",
         key: "id",

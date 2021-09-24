@@ -9,17 +9,17 @@ const PORT = process.env.PORT || 3001;
 const sequelize = require("./config/connection");
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
 
-// const sess = {
-//   secret: process.env.SESSION_SECRET,
-//   cookie: {},
-//   resave: false,
-//   saveUninitialized: true,
-//   store: new SequelizeStore({
-//     db: sequelize,
-//   }),
-// };
+const sess = {
+  secret: process.env.SESSION_SECRET,
+  cookie: {},
+  resave: false,
+  saveUninitialized: true,
+  store: new SequelizeStore({
+    db: sequelize,
+  }),
+};
 
-// app.use(session(sess));
+app.use(session(sess));
 
 const helpers = require("./utils/helpers");
 
@@ -32,8 +32,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "public")));
 
-//app.use(require("./controllers/"));
+app.use(require("./controllers/"));
 
-sequelize.sync({ force: true }).then(() => {
+sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log(`Now listening on ${PORT}`));
 });
