@@ -1,0 +1,111 @@
+#navbar {
+    background-color: #566a6d; /* Black background color */
+    position: fixed; /* Make it stick/fixed */
+    top: 0; /* Stay on top */
+    width: 100%; /* Full width */
+    transition: top 0.3s; /* Transition effect when sliding down (and up) */
+    text-align: center;
+    
+  
+
+    
+  }
+  
+  /* Style the navbar links */
+  #navbar a {
+    float: left;
+    display: flex;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    
+   
+    
+  }
+  
+  #navbar a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+#hero {
+
+  padding:0px 0px 500px;
+  font-size:50px;
+  font-weight: bolder;
+  margin-top: 50px; 
+  text-align: center;
+}
+
+#profiles {
+  padding-top: 150px;
+}
+
+#background {
+  background-image: url("../images/background.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+
+}
+
+
+#patients {
+
+
+  float: left;
+  display: flex;
+  margin-left: 100px;
+  font-size:30px;
+  font-weight: bolder;
+  margin-top: 50px; 
+  margin-left: 300px;
+  
+ 
+
+}
+
+#patients a:link, a:visited,
+#doctors a:link, a:visited
+{
+    background-color: #1f68ee;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  #patients a:hover, a:active,
+  #doctors a:hover, a:active {
+      background-color: rgb(46, 219, 161);
+}
+
+
+#doctors {
+
+ 
+  float: right;
+  display: flex;
+  margin-left: 100px;
+  font-size:30px;
+  font-weight: bolder;
+  margin-right: 300px;
+  margin-top: 50px; 
+  color: white;
+  
+}
+
+
+
+
+  
+body {
+  min-height: 110vh;
+  background-color: #4ca1af;
+  background-image: linear-gradient(135deg, #4ca1af 0%, #c4e0e5 100%);
+  color: white;
+
+
+}
+
+ 
