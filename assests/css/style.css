@@ -140,4 +140,48 @@ button {
     }
   }
 
+  /* style for footer*/
+  footer{
+        margin-top: 5%;
+        background-color: #313840;
+        padding: 1% 10%;
+        text-align: center;
+  }
+  footer h1{
+      text-align: center;
+      color: #888888;
+      font-family: 'Koh Santepheap', cursive;
+      font-family: 'Playfair Display', serif;
+  }
+  footer form{
+      margin-top: 4%;
+  }
+  footer form .name, .email{
+      width:30%;
+      align-self:center;
+      height: 30px;
+      background-color: #313840;
+      border: none;
+      border-bottom:2px solid #888888;
+      font-size: 20px;
+  }
+  .name{
+      margin-right: 2%;
+  }
+  footer form textarea{
+      align-self: center;
+      margin-top: 2%;
+      border: none;
+      border-bottom:2px solid #888888;
+      background-color: #313840;
+      font-size: 20px;
+  }
+  footer form .btn{
+      color: #888888;
+      padding: 10px;
+      background-color: #313840;
+      border:2px solid #888888;
+      margin-top: 3%;
+  }
+
   
