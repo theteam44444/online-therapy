@@ -5,6 +5,7 @@
     width: 100%; /* Full width */
     transition: top 0.3s; /* Transition effect when sliding down (and up) */
     text-align: center;
+    justify-content: center;
     
   
 
@@ -18,6 +19,8 @@
     color: white;
     text-align: center;
     padding: 15px;
+    justify-content: center;
+    
     
    
     
@@ -39,15 +42,25 @@
 
 #profiles {
   padding-top: 150px;
+  
 }
 
 #background {
   background-image: url("../images/background.jpg");
   background-size: cover;
   background-attachment: fixed;
+  
+  
 
 }
 
+
+#profiles {
+  background-image: url("../images/background2.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+
+}
 
 #patients {
 
@@ -100,9 +113,7 @@
 
   
 body {
-  min-height: 110vh;
-  background-color: #4ca1af;
-  background-image: linear-gradient(135deg, #4ca1af 0%, #c4e0e5 100%);
+
   color: white;
 
 
