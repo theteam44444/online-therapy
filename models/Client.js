@@ -50,12 +50,14 @@ Client.init(
       },
     },
     // doctor_id: {
+    //   type: DataTypes.INTEGER,
     //   references: {
     //     model: "doctor",
     //     key: "id",
     //   },
     // },
     // appointment_id: {
+    //   type: DataTypes.INTEGER,
     //   references: {
     //     model: "appointment",
     //     key: "id",
