@@ -17,6 +17,14 @@ const clientData = [
     email: "jdoe@test.ca",
     password: "password",
   },
+  {
+    first_name: "Charles",
+    last_name: "Dawkins",
+    address: "Scarborough, ON",
+    birth_date: "1978-12-06",
+    email: "theteam44444@gmail.com",
+    password: "password",
+  },
 ];
 
 const seedClients = () =>
