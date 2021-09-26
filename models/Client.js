@@ -1,8 +1,13 @@
 const { Model, DataTypes } = require("sequelize");
-const bcrypt = require("bcrypt");
 const sequelize = require("../config/connection");
+const bcrypt = require("bcrypt");
 
-class Client extends Model {}
+class Client extends Model {
+  // set up method to run on instance data to check password
+  checkPassword(loginPw) {
+    return bcrypt.compareSync(loginPw, this.password);
+  }
+}
 
 //Fields/Columns for Client model
 Client.init(
@@ -44,6 +49,20 @@ Client.init(
         len: [6],
       },
     },
+    // doctor_id: {
+    //   type: DataTypes.INTEGER,
+    //   references: {
+    //     model: "doctor",
+    //     key: "id",
+    //   },
+    // },
+    // appointment_id: {
+    //   type: DataTypes.INTEGER,
+    //   references: {
+    //     model: "appointment",
+    //     key: "id",
+    //   },
+    // },
   },
   {
     hooks: {
@@ -68,3 +87,5 @@ Client.init(
     modelName: "client",
   }
 );
+
+module.exports = Client;
