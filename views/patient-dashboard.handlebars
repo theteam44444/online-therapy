@@ -1,0 +1,75 @@
+
+  <div class="row min-vh-100 no-gutters">
+    <header class="col-12 col-lg-3 bg-dark text-light sticky-top d-flex flex-column p-4 p-lg-3">
+      <h1 class="text-center">
+      <span class="oi oi-task d-inline d-lg-none"></span>
+        Patient Dashboard
+      </h1>
+
+  
+      <button id="dateTime" class="btn btn-block btn-add"> Choose Date/TIme</button>
+
+
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" for="dropdownDoctor" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Choose Doctor
+        </button>
+        <select id="dropdownDoctor" >
+          {{#each doctors}}
+                <option>{{this}}</option>
+          {{/each}}
+        </select>
+      </div>
+
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" for="dropdownTypeAppointment" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Choose Type of Appointment
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#">Zoom Video Call</a>
+          <a class="dropdown-item" href="#">Mobile Phone</a>
+          <a class="dropdown-item" href="#">In-Person</a>
+        </div>
+      </div>
+    </header>
+
+
+    <main class="col-12 col-lg-9 d-flex flex-column">
+
+      <div class="m-5 row justify-content-around">
+
+        <div class="col-12">
+          <div class = "card">
+            <h4 class = "card-header bg-dark text-light">
+              Patient Details
+
+            </h4>
+            <ul id="list-toDo" class="list-group list-group-flush"></ul>
+          </div>
+        </div>
+
+        <div class="col-12">
+          <div class = "card">
+            <h4 class = "card-header bg-dark text-light">
+              Existing Appointments
+            </h4>
+            <ul id="list-toDo" class="list-group list-group-flush">
+              
+               {{#each appointment}}
+              <li>
+                  {{> appointment-info post }}
+              </li>
+               {{/each}}
+
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+
+</body>
+
+</html>
