@@ -1,7 +1,8 @@
-async function newFormHandler(event) {
+async function addAppointmentClickHandler(event) {
     event.preventDefault();
 
     const dateTime = document.querySelector('input[name="dateTime"]').value;
+    const issueChosen = document.querySelector('input[name="dropdownIssue"]').value;
     const doctorChosen = document.querySelector('input[name="dropdownDoctor"]').value;
     const modeOfAppointment = document.querySelector('input[name="dropdownTypeAppointment"]').value;
 
@@ -9,6 +10,7 @@ async function newFormHandler(event) {
         method: 'POST',
         body: JSON.stringify({
             dateTime,
+            issueChosen,
             doctorChosen,
             modeOfAppointment
         }),
@@ -23,5 +25,5 @@ async function newFormHandler(event) {
         alert(response.statusText);
     }
 }
-
-document.querySelector('createAppointment').addEventListener('click', addAppointmentHandler);
+      
+document.querySelector('.createAppointment').addEventListener('click', addAppointmentClickHandler);
