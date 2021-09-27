@@ -17,4 +17,7 @@ const navSlide=function(){
         burger.classList.toggle('toggle');
     });
 }
+const reset=function(){
+    document.myForm.reset();
+}
 navSlide();
