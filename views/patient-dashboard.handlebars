@@ -7,7 +7,12 @@
       </h1>
 
   
-      <button id="dateTime" class="btn btn-block btn-add"> Choose Date/Tme </button>
+      <h1 class="text-center">
+      <span class="oi oi-task d-inline d-lg-none"></span>
+        Schedule Appointment Now
+      </h1>
+
+      <input type="text" id="dateTime" placeholder="Choose Date and Time" data-input>
       
       <div class="dropdown">
         <button class="btn btn-secondary dropdown-toggle" type="button" for="dropdownIssue" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -72,6 +77,7 @@
             <h4 class = "card-header bg-dark text-light">
               Existing Appointments
             </h4>
+            {{#if appointment.length}}
             <ul id="list-toDo" class="list-group list-group-flush">
                {{#each appointment}}
               <li>
@@ -81,6 +87,7 @@
               </li>
               {{/each}}
             </ul>
+            {{/if}}
           </div>
         </div>
 
@@ -91,6 +98,8 @@
 <script src="/javascript/add-appointment.js"></script>
 <script src="/javascript/display-appointments.js"></script>
 <script src="/javascript/display-patientDetails.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.2.3/flatpickr.js"></script>
+
 </body>
 
 </html>
