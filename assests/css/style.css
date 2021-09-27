@@ -1,4 +1,8 @@
-
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
   html {
     scroll-behavior: smooth;
   }
@@ -17,13 +21,9 @@
   }
     /*-------------Nav-------------*/
     #nav-wrapper {
-        overflow: hidden;
-        width: 100%;
-        margin: 0 auto;
-        position: fixed;
+        position: sticky !important;
         top: 0;
-        left: 0;
-        z-index: 100;
+        z-index: 1;
       }
       #nav {
         background-color: #4ca1af;
@@ -50,13 +50,6 @@
       .nav-link, .logo {
         padding: 0 1em;
       }
-      /* span.gradient {
-        color: white;
-        padding: 0 1em;
-        position: relative;
-        right: 1em;
-        margin-right: auto;
-      } */
       h1.logo {
         font-weight: 300;
         font-size: 1.75em;
@@ -71,7 +64,7 @@
         text-transform: uppercase;
         text-align: center;
         border-top: none;
-      font-size: 1.5em;
+         font-size: 1.5em;
       }
       a:link, a:visited, a:active {
         text-decoration: none;
@@ -85,16 +78,15 @@
         overflow: hidden;
       flex-direction: row;
       justify-content: flex-end;
-      position: relative;
+      /* position: relative; */
       left: 1.5em;
       height: auto;
       }
       .nav-link-span {
-        transform: skew(20deg);
         display: inline-block;
       }
       .nav-link {
-        transform: skew(-20deg);
+        /* transform: skew(-20deg); */
         color: #777;
         text-decoration: none;
       }
@@ -137,33 +129,31 @@
         transform: translateX(0);
     }
 }
-.nav-active{
-    transform: translateX(0);
-    opacity: 1;
-}
 @media screen and (max-width:850px) {
-    .right a{
-       opacity: 0;
-    }
-    .burger{
-        display: block;
-        cursor: pointer;
-    }
     body{
         overflow-x: hidden;
     }
     .right{
         position: absolute;
         right: 0px;
-        height:92vh;
-        top: 8vh;
+        height:50vh;
+        top:8vh;
         background-color:#4ca1af;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        width: 50%;
+        align-items: baseline;
         transform: translateX(100%);
     }
+    .burger{
+        display: block;
+        cursor: pointer;
+    }
+    .right a{
+        opacity: 0;
+    }
+}
+.nav-active{
+    transform: translateX(0);
 }
 
   /* style for footer*/
@@ -227,7 +217,6 @@
   /*about css*/
   .about_hero{
     background: url("../images/online_therapy.jpg") no-repeat center center/cover;
-    margin-top: 55px;
     height: 580px;
   }
   .our_mission{
