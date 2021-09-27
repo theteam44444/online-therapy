@@ -1,10 +1,7 @@
-const { application } = require('express');
-const { doctors } = require('./seeds/doctor-seeds');
+const axios = require("axios");
 
-app.get("/api/doctor-seeds", (req, res) => {
-    let results = doctorData
-    if (req.query) {
-        results = filterByQuery(req.query, results)
-    }
-    res.json(results);
-});
+axios.get("/api/doctors")
+    .then((err, data) => {
+        console.log(data);
+        if (err) {console.log(err)};
+    });
