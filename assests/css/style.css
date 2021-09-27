@@ -137,7 +137,7 @@
         position: absolute;
         right: 0px;
         height:50vh;
-        top:8vh;
+        top:7vh;
         background-color:#4ca1af;
         display: flex;
         flex-direction: column;
@@ -150,6 +150,7 @@
     }
     .right a{
         opacity: 0;
+        margin-bottom: 15px;
     }
 }
 .nav-active{
@@ -173,6 +174,7 @@
   }
   footer form{
       margin-top: 4%;
+      align-content: center;
   }
   footer form .name, .email{
       width:30%;
@@ -184,7 +186,7 @@
       font-size: 20px;
   }
   .name{
-      margin-right: 2%;
+      margin-right: 1%;
   }
   footer form textarea{
       align-self: center;
