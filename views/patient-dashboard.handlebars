@@ -7,8 +7,19 @@
       </h1>
 
   
-      <button id="dateTime" class="btn btn-block btn-add"> Choose Date/TIme</button>
-
+      <button id="dateTime" class="btn btn-block btn-add"> Choose Date/Tme </button>
+      
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" for="dropdownIssue" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Choose Symptom
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#">Marriage Counselling</a>
+          <a class="dropdown-item" href="#">Mental Health</a>
+          <a class="dropdown-item" href="#">Drug Addiction</a>
+        </div>
+        </select>
+      </div>
 
       <div class="dropdown">
         <button class="btn btn-secondary dropdown-toggle" type="button" for="dropdownDoctor" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -16,7 +27,7 @@
         </button>
         <select id="dropdownDoctor" >
           {{#each doctors}}
-                <option>{{this}}</option>
+                <option>{{doctor.first_name}} {{doctor.last_name}} </option>
           {{/each}}
         </select>
       </div>
@@ -31,6 +42,9 @@
           <a class="dropdown-item" href="#">In-Person</a>
         </div>
       </div>
+
+      <button id="createAppointment" class="btn btn-block btn-add"> Create Appointment</button>
+
     </header>
 
 
@@ -42,9 +56,14 @@
           <div class = "card">
             <h4 class = "card-header bg-dark text-light">
               Patient Details
-
             </h4>
-            <ul id="list-toDo" class="list-group list-group-flush"></ul>
+            <ul id="list-toDo" class="list-group list-group-flush">
+              {{client.first_name}}
+              {{client.last_name}}
+              {{client.address}}
+              {{client.birth_date}}
+              {{client.email}}
+            </ul>
           </div>
         </div>
 
@@ -54,13 +73,13 @@
               Existing Appointments
             </h4>
             <ul id="list-toDo" class="list-group list-group-flush">
-              
                {{#each appointment}}
               <li>
-                  {{> appointment-info post }}
+                  {{appointment.date}}
+                  {{appointment.details}
+                  {{appointment.doctor_id}}
               </li>
-               {{/each}}
-
+              {{/each}}
             </ul>
           </div>
         </div>
@@ -69,7 +88,9 @@
     </main>
   </div>
 
-
+<script src="/javascript/add-appointment.js"></script>
+<script src="/javascript/display-appointments.js"></script>
+<script src="/javascript/display-patientDetails.js"></script>
 </body>
 
 </html>
