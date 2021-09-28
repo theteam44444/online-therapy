@@ -19,6 +19,10 @@
   .un-skew {
     transform: skew(20deg);
   }
+
+  ::-webkit-input-placeholder {
+    text-align: center;
+  }
     /*-------------Nav-------------*/
     #nav-wrapper {
         position: sticky !important;
