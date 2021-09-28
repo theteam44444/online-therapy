@@ -31,12 +31,13 @@ router.get("/", async (req, res) => {
 
 router.post("/", async (req, res) => {
   try {
-    console.log("CREATE AN APPOINTMENT");
+    console.log("CREATE APPOINTMENT");
     const appointments = await Appointment.create({
       details: req.body.details,
       appointment_date: req.body.appointment_date,
       client_id: req.body.client_id,
       doctor_id: req.body.doctor_id,
+      appointment_type: req.body.appointment_type,
     });
 
     if (appointments) {

@@ -15,50 +15,60 @@
 </head>
 
 <body>
-    <div class="container d-flex flex-column">
-        <div class="row justify-content-around">
-            <div class="col-4">
-                <div class="list-group">
-                    <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
-                        Doctor Menu
-                    </a>
-                    <a href="#" class="list-group-item list-group-item-action">List of Patients</a>
-                    <a href="#" class="list-group-item list-group-item-action">Appointments</a>
-                    <a href="#" class="list-group-item list-group-item-action">Doctor Details</a>
-                    <a class="list-group-item list-group-item-action disabled">A disabled link item</a>
+    <div>
+        <div class="container d-flex flex-column">
+            <div class="mt-5 w-100 row justify-content-around">
+                <div class="col-3">
+                    <div class="list-group">
+                        <a href="#" class="list-group-item list-group-item-info active" aria-current="true">
+                            <h5>Doctor Menu</h5>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action fw-bolder">List of Patients</a>
+                        <a href="#" class="list-group-item list-group-item-action fw-bolder">Appointments</a>
+                        <a href="#" class="list-group-item list-group-item-action fw-bolder">Doctor Details</a>
+                    </div>
                 </div>
-            </div>
 
-            <div class="col-8">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">First</th>
-                            <th scope="col">Last</th>
-                            <th scope="col">Handle</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td colspan="2">Larry the Bird</td>
-                            <td>@twitter</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="col-9 table-responsive">
+                    <table class="table table-striped table-hover table-bordered border-dark">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">First Name</th>
+                                <th scope="col">Last Name</th>
+                                <th scope="col">address</th>
+                                <th scope="col">Birth Date</th>
+                                <th scope="col">Email</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td class="fw-bolder">Mark</td>
+                                <td class="fw-bolder">>Otto</td>
+                                <td class="fw-bolder">>Team 4 Street</td>
+                                <td class="fw-bolder">>MM/DD/YYYY</td>
+                                <td class="fw-bolder">>email@email.com</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td class="fw-bolder">>Jacob</td>
+                                <td class="fw-bolder">>Thornton</td>
+                                <td class="fw-bolder">>Team 4 Street</td>
+                                <td class="fw-bolder">>MM/DD/YYYY</td>
+                                <td class="fw-bolder">>email@email.com</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td class="fw-bolder">>Larry</td>
+                                <td class="fw-bolder">>Bird</td>
+                                <td class="fw-bolder">>Team 4 Street</td>
+                                <td class="fw-bolder">>MM/DD/YYYY</td>
+                                <td class="fw-bolder">>email@email.com</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>

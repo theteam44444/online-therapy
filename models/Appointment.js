@@ -17,7 +17,11 @@ Appointment.init(
     },
     appointment_date: {
       type: DataTypes.DATE,
-      //  allowNull: false,
+      allowNull: false,
+    },
+    appointment_type: {
+      type: DataTypes.STRING,
+      allowNull: false,
     },
     client_id: {
       type: DataTypes.INTEGER,
