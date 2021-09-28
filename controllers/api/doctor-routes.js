@@ -2,25 +2,14 @@ const router = require("express").Router();
 const { Doctor, Client, Appointment } = require("../../models");
 const withAuth = require("../../utils/auth");
 
-<<<<<<< HEAD
-// get all doctors with all the details
-router.get('/', async (req, res) => {
-    try {
-=======
 // get all doctors
 router.get("/", async (req, res) => {
   try {
->>>>>>> main
     const dbDoctorData = await Doctor.findAll({
       attributes: ["first_name", "last_name", "email", "phoneNumber"],
     });
-<<<<<<< HEAD
-    res.json(dbDoctorData)
-} catch(err) {
-=======
     res.json(dbDoctorData);
   } catch (error) {
->>>>>>> main
     console.log(err);
     res.status(500).json(err);
   }

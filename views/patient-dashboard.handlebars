@@ -23,7 +23,7 @@
       {{!-- <input class="mt-10 mb-5" type="datetime-local" id="dateTime" placeholder="Please select date and time" /> --}}
         <div>
         <label for="appointment-date">Appointment Date:</label>
-          <input type="datetime-local" id="appointment-date"
+          <input class="text-dark" type="datetime-local" id="appointment-date"
           name="appointment-date" value=""
        > </div>
 
@@ -40,25 +40,20 @@
       </div> --}}
       <div>
         <label for="details">Details</label>
-        <select name="details" id="details">
+        <select name="details" id="details" class="text-dark">
             <option value="Marriage Counselling">Marriage Counselling</option>
             <option value="Mental Health">Mental Health</option>
             <option value="Drug Addiction">Drug Addiction</option> 
         </select>
       </div>
-      <div class="btn-group">
-        <button class= "btn btn-primary dropdown-toggle mb-5" id="dropdownDoctor" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Choose Doctor
-        </button>
-        <div class="dropdown-menu">
-          {{!-- {{#each doctors}}
-               <button class="dropdown-item" type="button">{{doctor.first_name}} {{doctor.last_name}} </button>
-          {{/each}} --}}
-        </div>
-      </div>
+
+
+
+
+
       <div>
         <label for="doctor">Doctor</label>
-        <select name="doctor" id="doctor">
+        <select name="doctor" id="doctor" class="text-dark">
             <option value="Jay">Jay Sarmiento</option>
             <option value="Charles">Charles</option>
             <option value="Honey">Honey</option>           
@@ -76,7 +71,7 @@
       </div> --}}
       <div>
         <label for="appointmentType">Appointment Type</label>
-        <select name="appointmentType" id="appointmentType">
+        <select name="appointmentType" id="appointmentType" class="text-dark">
             <option value="Zoom Video Call">Zoom Video Call</option>
             <option value="Mobile Phone">Mobile Phone</option>
             <option value="In-Person">In-Person</option>             
