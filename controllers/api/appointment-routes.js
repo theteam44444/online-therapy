@@ -31,7 +31,7 @@ router.get("/", async (req, res) => {
 
 router.post("/", async (req, res) => {
   try {
-    console.log("CREATE AN APPOINTMENT");
+    console.log(req.body);
     const appointments = await Appointment.create({
       details: req.body.details,
       appointment_date: req.body.appointment_date,
