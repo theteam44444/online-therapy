@@ -8,21 +8,24 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.2.3/themes/dark.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
   <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/dark.css">
-  <title>Taskmaster Pro</title>
+  <title>Online Therapy</title>
 </head>
   
 <body>
   <div class="row min-vh-100 no-gutters">
-    <header class="col-12 col-lg-3 bg-dark text-light sticky-top d-flex flex-column p-4 p-lg-3">
+    <div class="col-12 col-lg-3 bg-dark text-light sticky-top d-flex flex-column p-4 p-lg-3">
   
       <h5 class="text-center">
       <span class="oi oi-task d-inline d-lg-none"></span>
         Schedule Appointment Now
       </h5>
       
-      <input class="mt-10 mb-5" type="datetime-local" id="dateTime" placeholder="Please select date and time" data-input>
-      
-      <div class="btn-group">
+      {{!-- <input class="mt-10 mb-5" type="datetime-local" id="dateTime" placeholder="Please select date and time" /> --}}
+      <input type="datetime-local" id="appointment-date"
+       name="appointment-date" value=""
+       > </br>
+
+      {{!-- <div class="btn-group">
         <button class= "btn btn-primary dropdown-toggle mb-5" id="dropdownIssue" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Choose Symptom
         </button>
@@ -31,21 +34,32 @@
           <button class="dropdown-item" type="button">Mental Health</button>
           <button class="dropdown-item" type="button">Drug Addiction</button>
         </div>
-      </div>
+      
+      </div> --}}
 
-
+      <select name="details" id="details">
+          <option value="Marriage Counselling">Marriage Counselling</option>
+          <option value="Mental Health">Mental Health</option>
+          <option value="Drug Addiction">Drug Addiction</option> 
+      </select>
+</br>
       <div class="btn-group">
         <button class= "btn btn-primary dropdown-toggle mb-5" id="dropdownDoctor" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Choose Doctor
         </button>
         <div class="dropdown-menu">
-          {{#each doctors}}
+          {{!-- {{#each doctors}}
                <button class="dropdown-item" type="button">{{doctor.first_name}} {{doctor.last_name}} </button>
-          {{/each}}
+          {{/each}} --}}
         </div>
       </div>
 
-      <div class="btn-group">
+      <select name="doctor" id="doctor">
+          <option value="Jay">Jay Sarmiento</option>
+          <option value="Charles">Charles</option>
+          <option value="Honey">Honey</option>           
+      </select>
+      {{!-- <div class="btn-group">
         <button class= "btn btn-primary dropdown-toggle mb-5" id="dropdownTypeAppointment" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Choose Type of Appointment
         </button>
@@ -54,11 +68,17 @@
           <button class="dropdown-item" type="button">Mobile Phone</button>
           <button class="dropdown-item" type="button">In-Person</button>
         </div>
-      </div>
+      </div> --}}
+      <select name="appointmentType" id="appointmentType">
+          <option value="Zoom Video Call">Zoom Video Call</option>
+          <option value="Mobile Phone">Mobile Phone</option>
+          <option value="In-Person">In-Person</option> 
+          
+      </select>
+      </br>
+      <button class="btn btn-success" id="createAppointment" type="button" >Create Appointment</button>
 
-      <button class="btn btn-success" id="createAppointment" type="button" > Create Appointment</button>
-
-    </header>
+    </div>
 
 
     <main class="col-12 col-lg-9 d-flex flex-column">
@@ -81,11 +101,11 @@
               </thead>
               <tbody>
                   <tr>
-                     <td>{{client.first_name}}</td>
+                     {{!-- <td>{{client.first_name}}</td>
                      <td>{{client.last_name}}</td>
                      <td>{{client.address}}</td>
                      <td>{{client.birth_date}}</td>
-                     <td>{{client.email}}</td>
+                     <td>{{client.email}}</td> --}}
                   </tr>
                   
               </tbody>
@@ -111,7 +131,7 @@
                   </tr>
               </thead>
               <tbody>
-                {{#each doctors}}
+                {{!-- {{#each doctors}}
                   <tr>
                       <th scope="row">1</th>
                       <td>{{appointment.date}}</td>
@@ -120,6 +140,7 @@
                       <td>{{appointment.mode}}</td>
                   </tr>
                 {{/each}} 
+                 --}}
               </tbody>
             </table>
           </div>
