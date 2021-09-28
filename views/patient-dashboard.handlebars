@@ -1,6 +1,6 @@
 
 <head>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
@@ -13,7 +13,7 @@
   
 <body>
   <div class="row min-vh-100 no-gutters">
-    <header class="col-12 col-lg-3 bg-dark text-light sticky-top d-flex flex-column p-4 p-lg-3">
+    <section class="col-12 col-lg-3 bg-dark text-light d-flex flex-column p-4 p-lg-3">
   
       <h5 class="text-center">
       <span class="oi oi-task d-inline d-lg-none"></span>
@@ -58,7 +58,7 @@
 
       <button class="class=”btn btn-success" id="createAppointment" type="button" class="btn btn-block btn-add"> Create Appointment</button>
 
-    </header>
+    </section>
 
 
     <main class="col-12 col-lg-9 d-flex flex-column">
@@ -131,13 +131,13 @@
     </main>
   </div>
 
-  <script>
+  {{!-- <script>
     $("# dropdown id").change(function () {
     //update the value in to span
     $('# span id').html($('# dropdown id').val());
     $('# dropdown id').hide();
-});
-  </script>
+    });
+  </script> --}}
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.2.3/flatpickr.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
