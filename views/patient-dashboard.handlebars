@@ -3,27 +3,29 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  {{!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.2.3/flatpickr.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.2.3/themes/dark.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-  <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/dark.css">
+  <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/dark.css"> --}}
   <title>Online Therapy</title>
 </head>
   
 <body>
   <div class="row min-vh-100 no-gutters">
     <div class="col-12 col-lg-3 bg-dark text-light sticky-top d-flex flex-column p-4 p-lg-3">
-  
+     <form class="createAppointment">
       <h5 class="text-center">
       <span class="oi oi-task d-inline d-lg-none"></span>
         Schedule Appointment Now
       </h5>
       
       {{!-- <input class="mt-10 mb-5" type="datetime-local" id="dateTime" placeholder="Please select date and time" /> --}}
-      <input type="datetime-local" id="appointment-date"
-       name="appointment-date" value=""
-       > </br>
+        <div>
+        <label for="appointment-date">Appointment Date:</label>
+          <input type="datetime-local" id="appointment-date"
+          name="appointment-date" value=""
+       > </div>
 
       {{!-- <div class="btn-group">
         <button class= "btn btn-primary dropdown-toggle mb-5" id="dropdownIssue" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -36,13 +38,14 @@
         </div>
       
       </div> --}}
-
-      <select name="details" id="details">
-          <option value="Marriage Counselling">Marriage Counselling</option>
-          <option value="Mental Health">Mental Health</option>
-          <option value="Drug Addiction">Drug Addiction</option> 
-      </select>
-</br>
+      <div>
+        <label for="details">Details</label>
+        <select name="details" id="details">
+            <option value="Marriage Counselling">Marriage Counselling</option>
+            <option value="Mental Health">Mental Health</option>
+            <option value="Drug Addiction">Drug Addiction</option> 
+        </select>
+      </div>
       <div class="btn-group">
         <button class= "btn btn-primary dropdown-toggle mb-5" id="dropdownDoctor" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Choose Doctor
@@ -53,12 +56,14 @@
           {{/each}} --}}
         </div>
       </div>
-
-      <select name="doctor" id="doctor">
-          <option value="Jay">Jay Sarmiento</option>
-          <option value="Charles">Charles</option>
-          <option value="Honey">Honey</option>           
-      </select>
+      <div>
+        <label for="doctor">Doctor</label>
+        <select name="doctor" id="doctor">
+            <option value="Jay">Jay Sarmiento</option>
+            <option value="Charles">Charles</option>
+            <option value="Honey">Honey</option>           
+        </select>
+      </div>
       {{!-- <div class="btn-group">
         <button class= "btn btn-primary dropdown-toggle mb-5" id="dropdownTypeAppointment" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Choose Type of Appointment
@@ -69,15 +74,16 @@
           <button class="dropdown-item" type="button">In-Person</button>
         </div>
       </div> --}}
-      <select name="appointmentType" id="appointmentType">
-          <option value="Zoom Video Call">Zoom Video Call</option>
-          <option value="Mobile Phone">Mobile Phone</option>
-          <option value="In-Person">In-Person</option> 
-          
-      </select>
-      </br>
-      <button class="btn btn-success" id="createAppointment" type="button" >Create Appointment</button>
-
+      <div>
+        <label for="appointmentType">Appointment Type</label>
+        <select name="appointmentType" id="appointmentType">
+            <option value="Zoom Video Call">Zoom Video Call</option>
+            <option value="Mobile Phone">Mobile Phone</option>
+            <option value="In-Person">In-Person</option>             
+        </select>
+      </div>
+      <button class="btn btn-success" id="createAppointments" type="submit" >Create Appointment</button>
+</form>
     </div>
 
 
@@ -150,7 +156,7 @@
 
     </main>
   </div>
-
+  <script src="/javascript/add-appointment.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.2.3/flatpickr.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -162,7 +168,7 @@
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.2.3/flatpickr.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="/javascript/add-appointment.js"></script>
+
   
 
 </body>
