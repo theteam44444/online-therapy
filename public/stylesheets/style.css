@@ -91,7 +91,7 @@ body {
       z-index: 1;
     }
     #nav {
-      background-color: #4ca1af;
+      background: linear-gradient(#141414, #3a3a3d);
       color: white;
       box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
       display: flex;
@@ -157,8 +157,8 @@ body {
       text-decoration: none;
     }
     a:hover.nav-link:not(.active) {
-      color: #444;
-      background: #ddd;
+      color: rgb(255, 255, 255);
+      background: linear-gradient(#141414, #66667a);
       text-decoration: none;
     }
     .burger{
@@ -203,7 +203,7 @@ body {
       right: 0;
       left: auto;
       top:8vh;
-      background-color:#4ca1af;
+      background: linear-gradient(#141414, #3a3a3d);
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -344,15 +344,15 @@ section{
 
 #hero {
 
-  padding:20px 0px 500px;
+  
   font-size:50px;
   font-weight: bolder;
-  margin-top: 50px; 
   text-align: center;
 }
 
 #profiles {
   padding-top: 150px;
+  
   
 }
 
@@ -367,12 +367,6 @@ section{
 }
 
 
-#profiles {
-  background-image: url("../images/background2.jpg");
-  background-size: cover;
-  background-attachment: fixed;
-
-}
 
 #patients {
 
@@ -400,7 +394,8 @@ section{
   
   #patients a:hover, a:active,
   #doctors a:hover, a:active {
-    background: linear-gradient(#141414, #232368);
+    background: linear-gradient(#141414, #66667a);
+    color: rgb(236, 236, 236);
 }
 
 
@@ -420,10 +415,24 @@ section{
 
   
 body {
-  min-height: 110vh;
- 
-  color: rgb(255, 255, 255);
-
+  
+  background: linear-gradient(to left,#dbdbdb, #fafafa);
 
 }
 
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  height: 750px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  float:left;
+  padding: 40px;
+  margin: 30px;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
