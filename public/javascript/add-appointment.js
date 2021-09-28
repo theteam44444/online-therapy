@@ -10,13 +10,6 @@ async function addAppointmentClickHandler(event) {
         dateFormat: "F, d Y H:i",
         minDate: "today",
         maxDate:new Date().fp_incr(30),
-        "disable": [
-            function(date) {
-                // return true to disable
-                return (date.getDay() === 0 || date.getDay() === 6);
-    ​
-            }
-        ],
     });
 
     const issueChosen = document.querySelector('input[name="dropdownIssue"]').value;
