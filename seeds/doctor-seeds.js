@@ -9,8 +9,8 @@ const doctorData = [
     phoneNumber: "4161234567",
   },
   {
-    first_name: "Count",
-    last_name: "Dooku",
+    first_name: "Joker",
+    last_name: "D",
     email: "dmalan@test.ca",
     password: "password",
     phoneNumber: "4160007896",
