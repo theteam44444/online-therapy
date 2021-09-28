@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.2.3/themes/dark.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
   <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/dark.css">
-  <title>Taskmaster Pro</title>
+  <title>Online Therapy</title>
 </head>
   
 <body>
@@ -48,17 +48,16 @@
           Choose Doctor
         </button>
         <div class="dropdown-menu">
-          {{#each doctors}}
+          {{!-- {{#each doctors}}
                <button class="dropdown-item" type="button">{{doctor.first_name}} {{doctor.last_name}} </button>
-          {{/each}}
+          {{/each}} --}}
         </div>
       </div>
 
- <select name="doctor" id="doctor">
+      <select name="doctor" id="doctor">
           <option value="Jay">Jay Sarmiento</option>
           <option value="Charles">Charles</option>
-          <option value="Honey">Honey</option> 
-          
+          <option value="Honey">Honey</option>           
       </select>
       {{!-- <div class="btn-group">
         <button class= "btn btn-primary dropdown-toggle mb-5" id="dropdownTypeAppointment" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -102,11 +101,11 @@
               </thead>
               <tbody>
                   <tr>
-                     <td>{{client.first_name}}</td>
+                     {{!-- <td>{{client.first_name}}</td>
                      <td>{{client.last_name}}</td>
                      <td>{{client.address}}</td>
                      <td>{{client.birth_date}}</td>
-                     <td>{{client.email}}</td>
+                     <td>{{client.email}}</td> --}}
                   </tr>
                   
               </tbody>
@@ -132,7 +131,7 @@
                   </tr>
               </thead>
               <tbody>
-                {{#each doctors}}
+                {{!-- {{#each doctors}}
                   <tr>
                       <th scope="row">1</th>
                       <td>{{appointment.date}}</td>
@@ -141,6 +140,7 @@
                       <td>{{appointment.mode}}</td>
                   </tr>
                 {{/each}} 
+                 --}}
               </tbody>
             </table>
           </div>

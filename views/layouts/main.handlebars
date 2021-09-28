@@ -24,24 +24,27 @@
   <body>
     {{! jay's part for header }}
     {{!-- <header>
-    <nav class="navbar bg-dark px-5">    
- 
-          <ul class="navbar-nav ">
-            <li><a href="/">Logo Here</a></li>                    
-          </ul> 
-  
+      <nav class="navbar bg-dark px-5">
+
+        <ul class="navbar-nav">
+          <li><a href="/">Logo Here</a></li>
+        </ul>
 
         {{#if loggedIn}}
-           <ul>
-            <li  class="nav-item"><a href="/">Dashboard</a></li>            
-             <li  class="nav-item"><a id="logout" href="#" class="btn-no-style">Logout</a></li>
+          <ul>
+            <li class="nav-item"><a href="/patient-dashboard">Dashboard</a></li>
+            <li class="nav-item"><a
+                id="logout"
+                href="#"
+                class="btn-no-style"
+              >Logout</a></li>
           </ul>
-        {{else}}        
-       <ul>
-         <li  class="nav-item"><a href="/">Dashboard</a></li>
-         <li  class="nav-item"><a href="/">Login</a></li>
-         <li  class="nav-item"><a href="/">Register</a></li>
-       </ul>
+        {{else}}
+          <ul>
+            <li class="nav-item"><a href="/patient-dashboard">Dashboard</a></li>
+            <li class="nav-item"><a href="/login">Login</a></li>
+            <li class="nav-item"><a href="/register">Register</a></li>
+          </ul>
         {{/if}}
 
       </nav>
@@ -54,10 +57,15 @@
               >Online Therapy</a></h1></span>
         </div>
         <div class="nav right">
-          <a href="#" class="nav-link">Home</a>
-          <a href="about.html" class="nav-link">About</a>
-          <a href="#contact" class="nav-link">Contact</a>
-          <a href="dashboard.html" class="nav-link">Dashboard</a>
+          <a href="/" class="nav-link">Home</a>
+          <a href="/about" class="nav-link">About</a>
+          {{#if loggedIn}}
+            <a id="logout" href="#" class="btn-no-style">Logout</a>
+          {{else}}
+            <a class="nav-link" href="/login">Login</a>
+            <a class="nav-link" href="/register">Register</a>
+            <a href="/patient-dashboard" class="nav-link">Dashboard</a>
+          {{/if}}
         </div>
         <div class="burger">
           <div class="line1"></div>
@@ -67,7 +75,7 @@
       </nav>
     </header>
 
-    <main class="mt-auto">
+    <main>
       {{{body}}}
     </main>
 
@@ -88,9 +96,9 @@
       </div>
       <div class="details">
         <h4>online therapy ©2021 |</h4>
-        <a href="#">Home |</a>
+        {{! <a href="/">Home |</a>
         <a href="about.html">About |</a>
-        <a href="dashboard.html">Dashboard</a>
+        <a href="dashboard.html">Dashboard</a> }}
       </div>
     </footer>
     <script src="/javascript/responsive.js"></script>
@@ -99,6 +107,6 @@
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
       crossorigin="anonymous"
     ></script>
-
+    <script src="/javascript/logout.js"></script>
   </body>
 </html>

@@ -4,7 +4,6 @@ const auth = require("../../utils/auth");
 
 router.get("/", async (req, res) => {
   try {
-    console.log("GET ALL CLIENTS");
     const clients = await Client.findAll({});
     res.json(clients);
   } catch (error) {
@@ -13,58 +12,65 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.post("/", async (req, res) => {
-  try {
-    console.log("CREATE CLIENT");
-    const client = await Client.create({
-      first_name: req.body.first_name,
-      last_name: req.body.last_name,
-      address: req.body.address,
-      birth_date: req.body.birth_date,
-      email: req.body.email,
-      password: req.body.password,
-    });
+router.post("/", (req, res) => {
+  Client.create({
+    first_name: req.body.first_name,
+    last_name: req.body.last_name,
+    address: req.body.address,
+    birth_date: req.body.birth_date,
+    email: req.body.email,
+    password: req.body.password,
+  })
+    .then((dbClientData) => {
+      req.session.save(() => {
+        req.session.client_id = dbClientData.id;
+        req.session.email = dbClientData.email;
+        req.session.loggedIn = true;
 
-    if (client) {
-      res.json(client);
-    }
-  } catch (error) {
-    res.status(500).json(error);
-  }
+        res.json(dbClientData);
+      });
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
+    });
 });
 
-// login route
-router.post('/login', async (req, res) => {
-  try {
-  const dbClientData = await Client.findOne({
-    where:  {
-      email: req.params.email
+router.post("/login", (req, res) => {
+  Client.findOne({
+    where: {
+      email: req.body.email,
+    },
+  }).then((dbClientData) => {
+    if (!dbClientData) {
+      res.status(400).json({ message: "No user with that email address!" });
+      return;
     }
-    
-  });
-  console.log("email is ", email)
-  if(!email) {
-      res.status(404).json({ message: 'Wrong email/password'});
+
+    const validPassword = dbClientData.checkPassword(req.body.password);
+
+    if (!validPassword) {
+      res.status(400).json({ message: "Incorrect password!" });
       return;
-  }
-  const validPassword = dbClientData.checkPassword(req.body.password);
-  if(!validPassword) {
-      res.status(404).json({message: 'Wrong email/ password'});
-      return;
-  }
-  req.session.save(() => {
-      req.session.user_id = dbClientData.id;
+    }
+
+    req.session.save(() => {
+      req.session.client_id = dbClientData.id;
       req.session.email = dbClientData.email;
       req.session.loggedIn = true;
-      res.json({user: dbClientData, message: 'You are now logged in!'});
+      res.json({ client: dbClientData, message: "You are now logged in!" });
+    });
   });
-  }
-  catch(error) {
-      res.status(500).json(error);
-  }
 });
 
-
-
+router.post("/logout", (req, res) => {
+  if (req.session.loggedIn) {
+    req.session.destroy(() => {
+      res.status(204).end();
+    });
+  } else {
+    res.status(404).end();
+  }
+});
 
 module.exports = router;

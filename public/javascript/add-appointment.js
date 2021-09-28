@@ -1,4 +1,4 @@
-async function addAppointmentClickHandler(event) {
+async function addAppointmentHandler(event) {
   event.preventDefault();
 
   const dateTime = document.querySelector("#appointment-date").value;
@@ -44,22 +44,26 @@ async function addAppointmentClickHandler(event) {
   }
 }
 
-async function getAppointments(event) {
-  event.preventDefault();
+// async function getAppointments() {
+//   console.log("getAppointments");
 
-  const response = await fetch(`/api/appointments`, {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
-  if (response.ok) {
-    // document.location.replace("/dashboard");
-    alert("Appointment retrieved successfully");
-  } else {
-    alert(response.statusText);
-  }
-}
+//   const response = await fetch(`/api/appointments`, {
+//     method: "GET",
+//     headers: {
+//       "Content-Type": "application/json",
+//     },
+//   });
+//   if (response.ok) {
+//     // document.location.replace("/dashboard");
+//     alert("Appointment retrieved successfully");
+//   } else {
+//     alert(response.statusText);
+//   }
+// }
+// document
+//   .querySelector("#createAppointment")
+//   .addEventListener("onload", getAppointments);
+
 document
   .querySelector("#createAppointment")
-  .addEventListener("onload", addAppointmentClickHandler);
+  .addEventListener("submit", addAppointmentHandler);
