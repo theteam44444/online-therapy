@@ -1,5 +1,5 @@
 /* Global Styles */
-:root {
+/* :root {
   --primary-color: #03a9f4;
   --dark-color: #000000;
   --light-color: #f4f4f4;
@@ -148,6 +148,7 @@ a:hover {
   overflow: hidden;
   flex-direction: row;
   justify-content: flex-end;
+  width: 60%;
   /* position: relative; */
   left: 1.5em;
   height: auto;
@@ -160,12 +161,10 @@ a:hover {
   color: #777;
   text-decoration: none;
 }
-.nav-link:last-child {
-  padding-right: 3em;
-}
 a:hover.nav-link:not(.active) {
   color: #444;
   background: #ddd;
+  text-decoration: none;
 }
 .burger {
   margin-right: 20px;
@@ -205,14 +204,17 @@ a:hover.nav-link:not(.active) {
   }
   .right {
     position: absolute;
-    right: 0px;
     height: 50vh;
-    top: 7vh;
+    right: 0;
+    left: auto;
+    top: 8vh;
     background-color: #4ca1af;
     display: flex;
     flex-direction: column;
-    align-items: baseline;
+    align-items: center;
     transform: translateX(100%);
+    opacity: 0;
+    width: 50%;
   }
   .burger {
     display: block;
@@ -220,11 +222,15 @@ a:hover.nav-link:not(.active) {
   }
   .right a {
     opacity: 0;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+  }
+  .right a:hover {
+    padding: 0 100%;
   }
 }
 .nav-active {
   transform: translateX(0);
+  opacity: 1;
 }
 
 /* style for footer*/
@@ -234,14 +240,13 @@ footer {
   padding: 1% 10%;
   text-align: center;
   width: 100%;
-  position: absolute;
-  bottom: 0;
 }
-footer h1 {
+footer h3 {
   text-align: center;
   color: #888888;
   font-family: "Koh Santepheap", cursive;
   font-family: "Playfair Display", serif;
+  font-size: 2.5em;
 }
 footer form {
   margin-top: 4%;
@@ -267,6 +272,7 @@ footer form textarea {
   border-bottom: 2px solid #888888;
   background-color: #313840;
   font-size: 20px;
+  width: 62%;
 }
 footer form .btn {
   color: #888888;
@@ -277,17 +283,50 @@ footer form .btn {
 }
 .details {
   color: #888888;
-  text-align: left;
+  text-align: center;
   display: flex;
   align-items: center;
-}
-.details h4 {
-  margin: 0;
+  justify-content: center;
+  margin-top: 10px;
 }
 .details a {
   color: #888888;
 }
-
+.btn:hover {
+  background-color: #888888;
+  color: #313840;
+}
+.name,
+.email,
+.message {
+  color: white;
+}
+.name,
+.email,
+.message:focus {
+  outline: none;
+}
+.details a:hover {
+  text-decoration: none;
+  color: #888888;
+}
+@media screen and (max-width: 700px) {
+  .name,
+  .email,
+  .message {
+    width: 80% !important;
+  }
+  .name {
+    margin-right: 0;
+  }
+  .email,
+  .name {
+    margin-top: 20px;
+  }
+  .message {
+    margin-top: 10px;
+  }
+}
 /*about css*/
 .about_hero {
   background: url("../images/online_therapy.jpg") no-repeat center center/cover;
@@ -306,4 +345,76 @@ section {
 }
 .developers div img {
   border-radius: 100%;
+}
+
+/* Adi */
+
+#hero {
+  padding: 20px 0px 500px;
+  font-size: 50px;
+  font-weight: bolder;
+  margin-top: 50px;
+  text-align: center;
+}
+
+#profiles {
+  padding-top: 150px;
+}
+
+#background {
+  background-image: url("../images/background.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#profiles {
+  background-image: url("../images/background2.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#patients {
+  float: left;
+  display: flex;
+  margin-left: 100px;
+  font-size: 30px;
+  font-weight: bolder;
+  margin-top: 50px;
+  margin-left: 300px;
+}
+
+#patients a:link,
+a:visited,
+#doctors a:link,
+a:visited {
+  background: linear-gradient(#141414, #3a3a3d);
+  color: rgb(236, 236, 236);
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+#patients a:hover,
+a:active,
+#doctors a:hover,
+a:active {
+  background: linear-gradient(#141414, #232368);
+}
+
+#doctors {
+  float: right;
+  display: flex;
+  margin-left: 100px;
+  font-size: 30px;
+  font-weight: bolder;
+  margin-right: 300px;
+  margin-top: 50px;
+  color: rgb(236, 236, 236);
+}
+
+body {
+  min-height: 110vh;
+
+  color: rgb(255, 255, 255);
 }
