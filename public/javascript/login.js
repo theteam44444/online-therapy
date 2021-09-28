@@ -1,11 +1,11 @@
 async function loginFormHandler(event) {
   event.preventDefault();
 
-  const email = document.querySelector("#email-login").value.trim();
-  const password = document.querySelector("#password-login").value.trim();
+  const email = document.querySelector("#email-doctor").value.trim();
+  const password = document.querySelector("#password-doctor").value.trim();
 
   if (email && password) {
-    const response = await fetch("/api/users/login", {
+    const response = await fetch("/api/doctors/login", {
       method: "post",
       body: JSON.stringify({
         email,
@@ -15,7 +15,8 @@ async function loginFormHandler(event) {
     });
     console.log(response);
     if (response.ok) {
-      document.location.replace("/dashboard");
+      // document.location.replace("/dashboard");
+      alert("success");
     } else {
       alert(response.statusText);
     }
