@@ -5,7 +5,7 @@ router.get("/", (req, res) => {
   //   res.redirect("/");
   //   return;
   // }
-  res.render("patient-dashboard");
+  res.render("doctors-login");
 });
 
 router.get("/register", (req, res) => {
