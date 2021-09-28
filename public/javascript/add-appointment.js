@@ -1,7 +1,6 @@
 async function addAppointmentHandler(event) {
   event.preventDefault();
-
-  const dateTime = document.querySelector("#appointment-date").value;
+  const appointment_date = document.querySelector("#appointment-date").value;
   // dateTime.flatpickr("#dateTime",{
   //   enableTime: true,
   //   minTime: "09:00",
@@ -19,18 +18,17 @@ async function addAppointmentHandler(event) {
 
   // return dateTime;
   const details = document.querySelector("#details").value;
-  console.log(details);
   const doctorChosen = document.querySelector("#doctor").value;
-  const appointmentType = document.querySelector("#appointmentType").value;
+  const appointment_type = document.querySelector("#appointmentType").value;
 
   const response = await fetch(`/api/appointments`, {
     method: "POST",
     body: JSON.stringify({
-      appointment_date: dateTime,
+      appointment_date,
       details,
       doctor_id: "1",
       client_id: "1",
-      appointment_type: appointmentType,
+      appointment_type,
     }),
     headers: {
       "Content-Type": "application/json",
@@ -65,5 +63,5 @@ async function addAppointmentHandler(event) {
 //   .addEventListener("onload", getAppointments);
 
 document
-  .querySelector("#createAppointment")
+  .querySelector(".createAppointment")
   .addEventListener("submit", addAppointmentHandler);
