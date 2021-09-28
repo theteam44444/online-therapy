@@ -443,6 +443,13 @@ body {
 .title {
   color: grey;
   font-size: 18px;
+  text-align: center !important;
+}
+
+.card p {
+
+  text-align: left;
+
 }
 
 .group{
