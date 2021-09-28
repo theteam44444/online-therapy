@@ -1,49 +1,62 @@
 
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.2.3/flatpickr.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.2.3/themes/dark.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/dark.css">
+  <title>Taskmaster Pro</title>
+</head>
+  
+<body>
   <div class="row min-vh-100 no-gutters">
     <header class="col-12 col-lg-3 bg-dark text-light sticky-top d-flex flex-column p-4 p-lg-3">
-      <h1 class="text-center">
-      <span class="oi oi-task d-inline d-lg-none"></span>
-        Patient Dashboard
-      </h1>
-
   
-      <button id="dateTime" class="btn btn-block btn-add"> Choose Date/Tme </button>
+      <h5 class="text-center">
+      <span class="oi oi-task d-inline d-lg-none"></span>
+        Schedule Appointment Now
+      </h5>
       
-      <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" for="dropdownIssue" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <input class="mt-10 mb-5" type="datetime-local" id="dateTime" placeholder="Please select date and time" data-input>
+      
+      <div class="btn-group">
+        <button class= "btn btn-primary dropdown-toggle mb-5" id="dropdownIssue" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Choose Symptom
         </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#">Marriage Counselling</a>
-          <a class="dropdown-item" href="#">Mental Health</a>
-          <a class="dropdown-item" href="#">Drug Addiction</a>
+        <div class="dropdown-menu">
+          <button class="dropdown-item" type="button">Marriage Counselling</button>
+          <button class="dropdown-item" type="button">Mental Health</button>
+          <button class="dropdown-item" type="button">Drug Addiction</button>
         </div>
-        </select>
       </div>
 
-      <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" for="dropdownDoctor" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+      <div class="btn-group">
+        <button class= "btn btn-primary dropdown-toggle mb-5" id="dropdownDoctor" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Choose Doctor
         </button>
-        <select id="dropdownDoctor" >
+        <div class="dropdown-menu">
           {{#each doctors}}
-                <option>{{doctor.first_name}} {{doctor.last_name}} </option>
+               <button class="dropdown-item" type="button">{{doctor.first_name}} {{doctor.last_name}} </button>
           {{/each}}
-        </select>
-      </div>
-
-      <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" for="dropdownTypeAppointment" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Choose Type of Appointment
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#">Zoom Video Call</a>
-          <a class="dropdown-item" href="#">Mobile Phone</a>
-          <a class="dropdown-item" href="#">In-Person</a>
         </div>
       </div>
 
-      <button id="createAppointment" class="btn btn-block btn-add"> Create Appointment</button>
+      <div class="btn-group">
+        <button class= "btn btn-primary dropdown-toggle mb-5" id="dropdownTypeAppointment" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Choose Type of Appointment
+        </button>
+        <div class="dropdown-menu">
+          <button class="dropdown-item" type="button">Zoom Video Call</button>
+          <button class="dropdown-item" type="button">Mobile Phone</button>
+          <button class="dropdown-item" type="button">In-Person</button>
+        </div>
+      </div>
+
+      <button class="class=”btn btn-success" id="createAppointment" type="button" class="btn btn-block btn-add"> Create Appointment</button>
 
     </header>
 
@@ -53,17 +66,33 @@
       <div class="m-5 row justify-content-around">
 
         <div class="col-12">
-          <div class = "card">
+          <div class = "card mb-3">
             <h4 class = "card-header bg-dark text-light">
-              Patient Details
+              Client Personal  Details
             </h4>
-            <ul id="list-toDo" class="list-group list-group-flush">
-              {{client.first_name}}
-              {{client.last_name}}
-              {{client.address}}
-              {{client.birth_date}}
-              {{client.email}}
-            </ul>
+            <table class="table">
+              <thead>
+                  <tr>
+                      <th scope="col">First Name </th>
+                      <th scope="col">Last Name </th>
+                      <th scope="col">Current Address</th>
+                      <th scope="col">Date of Birth</th>
+                      <th scope="col">Email Address</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                     <td>{{client.first_name}}</td>
+                     <td>{{client.last_name}}</td>
+                     <td>{{client.address}}</td>
+                     <td>{{client.birth_date}}</td>
+                     <td>{{client.email}}</td>
+                  </tr>
+                  
+              </tbody>
+            </table>
+              
+            
           </div>
         </div>
 
@@ -72,25 +101,57 @@
             <h4 class = "card-header bg-dark text-light">
               Existing Appointments
             </h4>
-            <ul id="list-toDo" class="list-group list-group-flush">
-               {{#each appointment}}
-              <li>
-                  {{appointment.date}}
-                  {{appointment.details}
-                  {{appointment.doctor_id}}
-              </li>
-              {{/each}}
-            </ul>
+            <table class="table">
+              <thead>
+                  <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Date/Time </th>
+                      <th scope="col">Doctor Name </th>
+                      <th scope="col">Symptom Experiencing</th>
+                      <th scope="col">Type of Appointment</th>
+                  </tr>
+              </thead>
+              <tbody>
+                {{#each doctors}}
+                  <tr>
+                      <th scope="row">1</th>
+                      <td>{{appointment.date}}</td>
+                      <td>{{appointment.doctor_id}}</td>
+                      <td>{{appointment.details}}</td>
+                      <td>{{appointment.mode}}</td>
+                  </tr>
+                {{/each}} 
+              </tbody>
+            </table>
           </div>
         </div>
 
       </div>
+
     </main>
   </div>
 
-<script src="/javascript/add-appointment.js"></script>
-<script src="/javascript/display-appointments.js"></script>
-<script src="/javascript/display-patientDetails.js"></script>
+  <script>
+    $("# dropdown id").change(function () {
+    //update the value in to span
+    $('# span id').html($('# dropdown id').val());
+    $('# dropdown id').hide();
+});
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.2.3/flatpickr.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-ui-touch-punch@0.2.3/jquery.ui.touch-punch.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script> 
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.2.3/flatpickr.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  
+
 </body>
 
 </html>

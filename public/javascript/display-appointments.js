@@ -1,4 +1,4 @@
-function findById(id, appointments) {
-    const result = appointments.filter(appoinments => client.id)[0];
+function findById(id, Ay) {
+    const result = animalsArray.filter(animal => animal.id === id)[0];
     return result;
 }
