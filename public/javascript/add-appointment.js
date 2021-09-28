@@ -1,7 +1,17 @@
 async function addAppointmentClickHandler(event) {
     event.preventDefault();
 
-    const dateTime = document.querySelector('input[name="dateTime"]').value;
+    const dateTime = document.querySelector('input[name="dateTime"]');
+
+    dateTime.flatpickr({
+        enableTime: true,
+        minTime: "09:00",
+        maxTime: "17:00",
+        dateFormat: "F, d Y H:i",
+        minDate: "today",
+        maxDate:new Date().fp_incr(30),
+    });
+
     const issueChosen = document.querySelector('input[name="dropdownIssue"]').value;
     const doctorChosen = document.querySelector('input[name="dropdownDoctor"]').value;
     const modeOfAppointment = document.querySelector('input[name="dropdownTypeAppointment"]').value;

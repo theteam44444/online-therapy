@@ -92,4 +92,38 @@ router.delete('/:id', async (req, res) => {
     }
 })
 
+// login route
+
+router.post('/login', async (req, res) => {
+    try {
+    const dbDoctorData = await Doctor.findOne({
+      where:  {
+        email: req.params.email
+      }
+      
+    });
+    console.log("email is ", email)
+    if(!email) {
+        res.status(404).json({ message: 'Wrong email/password'});
+        return;
+    }
+    const validPassword = dbDoctorData.checkPassword(req.body.password);
+    if(!validPassword) {
+        res.status(404).json({message: 'Wrong email/ password'});
+        return;
+    }
+    req.session.save(() => {
+        req.session.user_id = dbDoctorData.id;
+        req.session.email = dbDoctorData.email;
+        req.session.loggedIn = true;
+        res.json({user: dbDoctorData, message: 'You are now logged in!'});
+    });
+    }
+    catch(error) {
+        res.status(500).json(error);
+    }
+  });
+  
+
+
 module.exports = router;
