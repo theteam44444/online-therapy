@@ -24,6 +24,7 @@ router.get("/", async (req, res) => {
     console.log("GET ALL APPOINTMENT");
     const appointments = await Appointment.findAll({});
     res.json(appointments);
+
   } catch (error) {
     res.status(500).json(error);
   }
@@ -35,8 +36,8 @@ router.post("/", async (req, res) => {
     const appointments = await Appointment.create({
       details: req.body.details,
       appointment_date: req.body.appointment_date,
-      client_id: req.body.client_id,
-      doctor_id: req.body.doctor_id,
+      client_id: req.session.client_id,
+      doctor_name: req.body.doctor_name,
       appointment_type: req.body.appointment_type,
     });
 

@@ -15,6 +15,26 @@ router.get("/", async (req, res) => {
   }
 });
 
+//  get a list of all doctors with first and last name
+router.get('/list', async (req, res) => {
+    try {
+        const dbDoctorData = await Doctor.findAll({
+            attributes: ['first_name',
+                        'last_name'
+        ]
+        });
+        res.json(dbDoctorData);
+        dbDoctorData.map(data => {
+            let doctorName = data.first_name + " " +  data.last_name;
+            console.log(doctorName);
+        })
+        
+        } catch(err) {
+            console.log(err);
+            res.status(500).json(err);
+        }
+})
+
 //  get one doctor
 router.get("/:id", async (req, res) => {
   try {
