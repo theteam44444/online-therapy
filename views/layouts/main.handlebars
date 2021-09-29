@@ -20,33 +20,6 @@
     <title>Online Therapy</title>
   </head>
   <body>
-    {{! jay's part for header }}
-    {{!-- <header>
-      <nav class="navbar bg-dark px-5">
-
-        <ul class="navbar-nav">
-          <li><a href="/">Logo Here</a></li>
-        </ul>
-
-        {{#if loggedIn}}
-          <ul>
-            <li class="nav-item"><a href="/patient-dashboard">Dashboard</a></li>
-            <li class="nav-item"><a
-                id="logout"
-                href="#"
-                class="btn-no-style"
-              >Logout</a></li>
-          </ul>
-        {{else}}
-          <ul>
-            <li class="nav-item"><a href="/patient-dashboard">Dashboard</a></li>
-            <li class="nav-item"><a href="/login">Login</a></li>
-            <li class="nav-item"><a href="/register">Register</a></li>
-          </ul>
-        {{/if}}
-
-      </nav>
-    </header> --}}
      <header id="nav-container">
         <nav id="navigation">
           <div class="left">
@@ -55,13 +28,13 @@
           <div class="right">
             <a href="/" class="nav-links">Home</a>
             <a href="/about" class="nav-links">About</a>
-            <!-- {{#if loggedIn}} -->
-              <!-- <a id="logout" href="#" class="btn-no-style">Logout</a>
-            {{else}} -->
+            {{#if loggedIn}}
+              <a id="logout" href="#" class="btn-no-style">Logout</a>
+            {{else}}
               <a class="nav-links" href="/login">Login</a>
               <a class="nav-links" href="/register">Register</a>
               <a href="/patient-dashboard" class="nav-links">Dashboard</a>
-            <!-- {{/if}} -->
+            {{/if}}
           </div>
           <div class="burger">
             <div class="line1"></div>
@@ -78,7 +51,7 @@
     <footer>
       <div id="contact">
         <h3>Get in touch with us.</h3>
-        <form class="row" onsubmit="reset()" name="myForm">
+        <form onsubmit="reset()" name="myForm">
           <input type="text" placeholder="Your Name" class="name" />
           <input type="text" placeholder="Your E-mail" class="email" />
           <textarea
@@ -91,10 +64,7 @@
         </form>
       </div>
       <div class="details">
-        <h4>online therapy ©2021 |</h4>
-        {{! <a href="/">Home |</a>
-        <a href="about.html">About |</a>
-        <a href="dashboard.html">Dashboard</a> }}
+        <h4>online therapy ©2021</h4>
       </div>
     </footer>
     <script src="/javascript/responsive.js"></script>
