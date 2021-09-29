@@ -16,71 +16,47 @@
 
 <body>
   <div>
-    <div class="mt-5 w-50 card text-center center-block">
 
-      <div class="card-header">
+    <div class="mt-5 w-50 card center-block">
+
+      <div class="card-header text-center">
+
         <h3>Register at Online Therapy</h3>
       </div>
 
       <div class="card-body">
-        <form class="signup-form form">
 
-          <div class="container">
-            <div class="row">
-              <div class="mx-auto mb-5 col-lg-6 col-centered">
-                <input style='width:75%' type="text" placeholder="Enter Email Address" id="email-signup" />
-              </div>
-            </div>
+        <form  class="signup-form form row g-3">
+          <div class="col-md-6">
+            <label for="firstname-signup" class="form-label">First Name</label>
+            <input type="text" class="form-control" id="firstname-signup" placeholder="Enter First Name">
           </div>
-
-          <div class="container">
-            <div class="row">
-              <div class="mx-auto mb-5 col-lg-6 col-centered">
-                <input style='width:75%' type="password" placeholder="Enter Password"  id="password-signup" >
-              </div>
-            </div>
+          <div class="col-md-6">
+            <label for="lastname-signup" class="form-label">Last Name</label>
+            <input type="text" class="form-control" id="lastname-signup" placeholder="Enter Last Name">
           </div>
-
-          <div class="container">
-            <div class="row">
-              <div class="mx-auto mb-5 col-lg-6 col-centered">
-                <input style='width:75%' class= spantype="text" placeholder="Enter First Name"  id="firstname-signup" >
-              </div>
-            </div>
+          <div class="col-md-12">
+            <label for="address-signup" class="form-label">Home Address</label>
+            <input type="text" class="form-control" id="address-signup" placeholder="Enter Home Address">
           </div>
-
-          <div class="container">
-            <div class="row">
-              <div class="mx-auto mb-5 col-lg-6 col-centered">
-                <input style='width:75%' type="text" placeholder="Enter Last Name" id="lastname-signup" >
-              </div>
-            </div>
+          <div class="col-md-12">
+            <label for="birthdate-signup" class="form-label">Date of Birth</label>
+            <input type="text" class="form-control" id="birthdate-signup" placeholder="YYYY-MM-DD">
           </div>
-
-          <div class="container">
-            <div class="row">
-              <div class="mx-auto mb-5 col-lg-6 col-centered">
-                <input style='width:75%' type="text" placeholder="Enter Home Address" id="address-signup" >
-              </div>
-            </div>
+          <div class="col-md-6">
+            <label for="email-signup" class="form-label">Email</label>
+            <input type="email" placeholder="Enter Email Address" class="form-control" id="email-signup">
           </div>
-
-          <div class="container">
-            <div class="row">
-              <div class="mx-auto mb-5 col-lg-6 col-centered">
-                <input style='width:75%' type="text" placeholder="Enter Date of Birth" id="birthdate-signup" >
-              </div>
-            </div>
+          <div class="col-md-6">
+            <label for="password-signup" class="form-label">Password</label>
+            <input type="text" placeholder="Enter Password"class="form-control" id="password-signup">
           </div>
-
-          <div>
-            <button class="btn btn-success" type="submit">Sign Up</button>
+          <div class="col-md-12 center-block">
+            <button type="submit" class="btn btn-success">Sign Up</button>
           </div>
-
         </form>
       </div>
-
-      <div class="card-footer text-muted">
+      <div class="card-footer text-muted text-center">
         Already have an account? <a href="/login">Login Now</a>
       </div>
 
@@ -97,4 +73,6 @@
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
   <script src="/javascript/register.js"></script>
+
 </body>
+
