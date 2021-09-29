@@ -22,8 +22,7 @@ router.get('/list', async (req, res) => {
             attributes: ['first_name',
                         'last_name'
         ]
-        });
-        res.json(dbDoctorData);
+        });        res.json(dbDoctorData);
         dbDoctorData.map(data => {
             let doctorName = data.first_name + " " +  data.last_name;
             console.log(doctorName);
