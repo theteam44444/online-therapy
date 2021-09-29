@@ -345,3 +345,21 @@ body {
 
   color: rgb(255, 255, 255);
 }
+/* for login and register */
+.login_now{
+  color: #777 !important;
+}
+.login_now:hover{
+  text-decoration: none;
+  color: #313840;
+}
+.register_now{
+  color: #777 !important;
+}
+.register_now:hover{
+  text-decoration: none;
+  color: #313840;
+}
+.login, .register{
+  margin:0 auto;
+}
