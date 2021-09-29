@@ -344,11 +344,11 @@ section{
 
 #hero {
 
-  padding:20px 200px;
+  padding:20px 200px 0px;
   font-size:50px;
   font-weight: bolder;
   text-align: center;
-
+ 
 }
 
 #hero2{
@@ -362,7 +362,14 @@ section{
   font-size:20px;
   font-weight: bolder;
   text-align: center;
+}
   
+
+#heropi{
+  font-size:20px;
+  text-align: center;
+
+    
 
 }
 
