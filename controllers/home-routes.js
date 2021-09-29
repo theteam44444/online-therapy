@@ -4,9 +4,11 @@ const router = require("express").Router();
 
 router.get("/", (req, res) => {
   if (req.session.loggedIn) {
-    res.redirect("/");
+    res.redirect("/patient-dashboard");
+    // res.redirect("/");
     return;
   }
+  // res.render("client-login");
   res.render("homepage");
 });
 
@@ -47,6 +49,7 @@ router.get("/patient-dashboard", async (req, res) => {
   })
   .then(dbAppointmentData => {
     const appointments = dbAppointmentData.map(appointment => appointment.get({ plain: true }));
+
     // console.log("appointments", appointments);
     res.render("patient-dashboard", 
     {appointments});

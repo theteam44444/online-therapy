@@ -24,12 +24,11 @@
       </h5>
       
       {{!-- <input class="mt-10 mb-5" type="datetime-local" id="dateTime" placeholder="Please select date and time" /> --}}
-<<<<<<< HEAD
-        <div>
-        <label for="appointment-date">Appointment Date:</label>
-          <input class="text-dark" type="text" id="appointment-date"
+        <div class="mb-3">
+        <label for="appointment-date">Appointment Date</label>
+          <input class="text-dark col-12" type="text" id="appointment-date"
           name="appointment-date" value=""> 
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.2.3/flatpickr.js"></script>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.2.3/flatpickr.js"></script>
           <script>
             $("#appointment-date").flatpickr({
               enableTime: true,
@@ -46,17 +45,8 @@
     // ],
   });
           </script>
-           
-          </div>
-  <br>
-=======
-        <div class="mb-3">
-        <label for="appointment-date">Appointment Date</label>
-          <input class="text-dark col-12" type="datetime-local" id="appointment-date"
-          name="appointment-date" value=""> 
         </div>
 
->>>>>>> main
       {{!-- <div class="btn-group">
         <button class= "btn btn-primary dropdown-toggle mb-5" id="dropdownIssue" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Choose Symptom
@@ -162,21 +152,8 @@
                   </tr>
               </thead>
               <tbody>
-<<<<<<< HEAD
-                {{#each appointments}}
-                  <tr>
-                      <th scope="row">{{id}}</th>
-                     <td>{{format_date_time appointment_date}}</td>
- 
-                      <td>{{doctor_name}}</td>
-                      <td>{{details}}</td>
-                      <td>{{appointment_type}}</td>
-                  </tr>
-                {{/each}} 
-=======
                
                 {{> appointment-info}}
->>>>>>> main
                  
               </tbody>
             </table>
