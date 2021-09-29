@@ -1,84 +1,89 @@
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/stylesheets/style.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Koh+Santepheap&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Koh+Santepheap&family=Playfair+Display&display=swap"
-      rel="stylesheet"
-    />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="   https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+ 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Koh+Santepheap&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Koh+Santepheap&family=Playfair+Display&display=swap" rel="stylesheet">
     <title>Online Therapy</title>
-  </head>
-  <body>
-    <header id="nav-container">
-      <nav id="navigation">
-        <div class="left">
-          <h1 class="logo un-skew"><a href="/">Online Therapy</a></h1>
-        </div>
-        <div class="right">
-          <a href="/" class="nav-links">Home</a>
-          <a href="/about" class="nav-links">About</a>
-          {{#if loggedIn}}
-            <a id="logout" href="#" class="nav-links">Logout</a>
-          {{else}}
-            <a class="nav-links" href="/login">Login</a>
-            <a class="nav-links" href="/register">Register</a>
-            <a href="/patient-dashboard" class="nav-links">Dashboard</a>
-          {{/if}}
-        </div>
-        <div class="burger">
-          <div class="line1"></div>
-          <div class="line2"></div>
-          <div class="line3"></div>
-        </div>
+</head>
+
+<body>
+  {{!-- jay's part for header --}}
+    {{!-- <header>
+    <nav class="navbar bg-dark px-5">    
+ 
+          <ul class="navbar-nav ">
+            <li><a href="/">Logo Here</a></li>                    
+          </ul> 
+  
+        {{#if loggedIn}}
+           <ul>
+            <li  class="nav-item"><a href="/">Dashboard</a></li>            
+             <li  class="nav-item"><a id="logout" href="#" class="btn-no-style">Logout</a></li>
+          </ul>
+        {{else}}        
+       <ul>
+         <li  class="nav-item"><a href="/">Dashboard</a></li>
+         <li  class="nav-item"><a href="/">Login</a></li>
+         <li  class="nav-item"><a href="/">Register</a></li>
+       </ul>
+        {{/if}}
       </nav>
+    </header> --}}
+    <header id="nav-wrapper">
+        <nav id="nav">
+          <div class="nav left">
+            <span class="gradient skew"><h1 class="logo un-skew"><a href="#home">Online Therapy</a></h1></span>
+          </div>
+          <div class="nav right">
+            <a href="#" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="#contact" class="nav-link">Contact</a>
+            <a href="dashboard.html" class="nav-link">Dashboard</a>
+          </div>
+          <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        </nav>
     </header>
 
-    <main>
-      {{{body}}}
+    <main class="mt-auto">
+      {{{ body }}}
     </main>
 
     <footer>
       <div id="contact">
         <h3>Get in touch with us.</h3>
-        <form onsubmit="reset()" name="myForm">
-          <input type="text" placeholder="Your Name" class="name" />
-          <input type="text" placeholder="Your E-mail" class="email" />
-          <textarea
-            placeholder="Your Message"
-            rows="4"
-            cols="72"
-            class="message"
-          ></textarea><br />
-          <input type="submit" value="Get in touch" class="btn" />
-        </form>
+          <form class="row" onsubmit="reset()" name="myForm">
+            <input type="text" placeholder="Your Name" class="name"/>
+            <input type="text" placeholder="Your E-mail" class="email"/>
+            <textarea placeholder="Your Message" rows="4" cols="72" class="message"></textarea><br>
+            <input type="submit" value="Get in touch" class="btn">
+          </form>
       </div>
       <div class="details">
-        <h4>online therapy ©2021</h4>
+        <h4>online therapy ©2021 |</h4>
+        <a href="#">Home |</a>
+        <a href="about.html">About |</a>
+        <a href="dashboard.html">Dashboard</a>
       </div>
     </footer>
     <script src="/javascript/responsive.js"></script>
-    <script
-      src="https://code.jquery.com/jquery-3.6.0.min.js"
-      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-      crossorigin="anonymous"
-    ></script>
-    {{#if loggedIn}}
-      <script src="/javascript/logout.js"></script>
-    {{/if}}
-  </body>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+</body>
 </html>
