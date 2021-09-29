@@ -4,8 +4,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/stylesheets/style.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,29 +24,29 @@
     <title>Online Therapy</title>
   </head>
   <body>
-     <header id="nav-container">
-        <nav id="navigation">
-          <div class="left">
-            <h1 class="logo un-skew"><ahref="#home">Online Therapy</a></h1>
-          </div>
-          <div class="right">
-            <a href="/" class="nav-links">Home</a>
-            <a href="/about" class="nav-links">About</a>
-            {{#if loggedIn}}
-              <a id="logout" href="#" class="nav-links">Logout</a>
-            {{else}}
-              <a class="nav-links" href="/login">Login</a>
-              <a class="nav-links" href="/register">Register</a>
-              <a href="/patient-dashboard" class="nav-links">Dashboard</a>
-            {{/if}}
-          </div>
-          <div class="burger">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-          </div>
-        </nav>
-      </header>
+    <header id="nav-container">
+      <nav id="navigation">
+        <div class="left">
+          <h1 class="logo un-skew"><a href="/">Online Therapy</a></h1>
+        </div>
+        <div class="right">
+          <a href="/" class="nav-links">Home</a>
+          <a href="/about" class="nav-links">About</a>
+          {{#if loggedIn}}
+            <a id="logout" href="#" class="nav-links">Logout</a>
+          {{else}}
+            <a class="nav-links" href="/login">Login</a>
+            <a class="nav-links" href="/register">Register</a>
+            <a href="/patient-dashboard" class="nav-links">Dashboard</a>
+          {{/if}}
+        </div>
+        <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </nav>
+    </header>
 
     <main>
       {{{body}}}

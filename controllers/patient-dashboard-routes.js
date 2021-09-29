@@ -1,24 +1,20 @@
 const router = require("express").Router();
 const sequelize = require("../config/connection");
 const { Appointment, Client } = require("../models");
+const auth = require("../utils/auth");
 
 router.get("/", (req, res) => {
   Appointment.findAll({
     where: {
       // use the ID from the session
-      client_id: req.session.client_id,
+      email: req.session.email,
     },
     // details: ["id", "appointment_date", "doctor_id"],
-    include: [
-      {
-        model: Client,
-      },
-    ],
   })
     .then((dbPostData) => {
       // serialize data before passing to template
-      const cdashboard = dbPostData.map((item) => item.get({ plain: true }));
-      res.render("/patient-dashboard", { cdashboard, loggedIn: true });
+      const appointment = dbPostData.map((item) => item.get({ plain: true }));
+      res.render("patient-dashboard", { appointment, loggedIn: true });
     })
     .catch((err) => {
       console.log(err);
