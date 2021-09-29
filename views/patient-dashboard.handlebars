@@ -15,15 +15,16 @@
 </head>
   
 <body>
-  <div class="row min-vh-100 no-gutters">
+  <div class="row min-vh-100 no-gutters position-sticky">
     <div class="col-12 col-lg-3 bg-dark text-light sticky-top d-flex flex-column p-4 p-lg-3">
      <form class="createAppointment">
       <h5 class="text-center mb-4">
       <span class="oi oi-task d-inline d-lg-none"></span>
-        Schedule Appointment Now
+        Schedule an Appointment
       </h5>
       
       {{!-- <input class="mt-10 mb-5" type="datetime-local" id="dateTime" placeholder="Please select date and time" /> --}}
+<<<<<<< HEAD
         <div>
         <label for="appointment-date">Appointment Date:</label>
           <input class="text-dark" type="text" id="appointment-date"
@@ -48,6 +49,14 @@
            
           </div>
   <br>
+=======
+        <div class="mb-3">
+        <label for="appointment-date">Appointment Date</label>
+          <input class="text-dark col-12" type="datetime-local" id="appointment-date"
+          name="appointment-date" value=""> 
+        </div>
+
+>>>>>>> main
       {{!-- <div class="btn-group">
         <button class= "btn btn-primary dropdown-toggle mb-5" id="dropdownIssue" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Choose Symptom
@@ -59,28 +68,24 @@
         </div>
       
       </div> --}}
-      <div>
+       <div class="mb-3">
         <label for="details">Details</label>
-        <select name="details" id="details" class="text-dark">
+        <select name="details" id="details" class="text-dark col-12">
             <option value="Marriage Counselling">Marriage Counselling</option>
             <option value="Mental Health">Mental Health</option>
             <option value="Drug Addiction">Drug Addiction</option> 
         </select>
       </div>
 
-<br>
-
-
-
-      <div>
+       <div class="mb-3">
         <label for="doctor">Doctor</label>
-        <select name="doctor" id="doctor" class="text-dark">
+        <select name="doctor" id="doctor" class="text-dark col-12">
             <option value="Andrew Smith">Andrew Smith</option>
             <option value="James Wang">James Wang</option>
             <option value="Sarah Snow">Sarah Snow</option>           
         </select>
       </div>
-      <br>
+    
       {{!-- <div class="btn-group">
         <button class= "btn btn-primary dropdown-toggle mb-5" id="dropdownTypeAppointment" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Choose Type of Appointment
@@ -91,16 +96,16 @@
           <button class="dropdown-item" type="button">In-Person</button>
         </div>
       </div> --}}
-      <div>
+       <div class="mb-5">
         <label for="appointmentType">Appointment Type</label>
-        <select name="appointmentType" id="appointmentType" class="text-dark">
+        <select name="appointmentType" id="appointmentType" class="text-dark col-12">
             <option value="Zoom Video Call">Zoom Video Call</option>
             <option value="Mobile Phone">Mobile Phone</option>
             <option value="In-Person">In-Person</option>             
         </select>
       </div>
-      <br>
-      <button class="btn btn-success" id="createAppointments" type="submit" >Create Appointment</button>
+     
+      <button class="btn btn-success col-12" id="createAppointments" type="submit" >SAVE</button>
 </form>
     </div>
 
@@ -132,7 +137,7 @@
                      <td>{{client.birth_date}}</td>
                      <td>{{client.email}}</td>
                   </tr>
-
+                {{!-- {{> client-info}} --}}
            
               </tbody>
             </table>
@@ -157,6 +162,7 @@
                   </tr>
               </thead>
               <tbody>
+<<<<<<< HEAD
                 {{#each appointments}}
                   <tr>
                       <th scope="row">{{id}}</th>
@@ -167,6 +173,10 @@
                       <td>{{appointment_type}}</td>
                   </tr>
                 {{/each}} 
+=======
+               
+                {{> appointment-info}}
+>>>>>>> main
                  
               </tbody>
             </table>
