@@ -20,6 +20,14 @@ router.get("/login", (req, res) => {
   res.render("client-login");
 });
 
+router.get("/doctors-login", (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect("/");
+    return;
+  }
+  res.render("doctors-login");
+});
+
 router.get("/register", (req, res) => {
   res.render("client-register");
 });

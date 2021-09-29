@@ -20,7 +20,7 @@ top: 0;
 z-index: 1;
 }
 #navigation{
-background-color: #4ca1af;
+background: linear-gradient(#141414, #3A3A3D);
 color: white;
 box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
 font-family: "Saira Semi Condensed", sans-serif;
@@ -161,7 +161,7 @@ opacity: 1;
 /* style for footer*/
 footer {
   margin-top: 5%;
-  background-color: #313840;
+  background: #3A3A3D;
   padding: 1% 10%;
   text-align: center;
   width: 100%;
@@ -184,7 +184,7 @@ footer form .name,
   width: 30%;
   align-self: center;
   height: 30px;
-  background-color: #313840;
+  background: #3A3A3D;
   border: none;
   border-bottom: 2px solid #888888;
   font-size: 20px;
@@ -197,14 +197,14 @@ footer form textarea {
   margin-top: 2%;
   border: none;
   border-bottom: 2px solid #888888;
-  background-color: #313840;
+  background: #3A3A3D;
   font-size: 20px;
   width: 62%;
 }
 footer form .btn {
   color: #888888;
   padding: 10px;
-  background-color: #313840;
+  background: #3A3A3D;
   border: 2px solid #888888;
   margin-top: 3%;
 }
@@ -275,76 +275,146 @@ section {
 }
 
 /* Adi */
-
 #hero {
-  padding: 20px 0px 500px;
-  font-size: 50px;
+
+  padding:20px 200px 0px;
+  font-size:50px;
   font-weight: bolder;
-  margin-top: 50px;
+  text-align: center;
+ 
+}
+
+#hero2{
+
+  font-size:50px;
+  font-weight: bolder;
   text-align: center;
 }
 
+#herop{
+  font-size:20px;
+  font-weight: bolder;
+  text-align: center;
+}
+  
+
+#heropi{
+  font-size:20px;
+  text-align: center;
+
+    
+
+}
+
 #profiles {
-  padding-top: 150px;
+  padding-top: 50px;
+  
+  
 }
 
 #background {
+  
   background-image: url("../images/background.jpg");
   background-size: cover;
   background-attachment: fixed;
+  
+
+
 }
 
-#profiles {
-  background-image: url("../images/background2.jpg");
-  background-size: cover;
-  background-attachment: fixed;
-}
+
 
 #patients {
-  float: left;
+
+
+  /* float: left; */
   display: flex;
-  margin-left: 100px;
-  font-size: 30px;
+  margin-left: 25%;
+  font-size:30px;
   font-weight: bolder;
-  margin-top: 50px;
-  margin-left: 300px;
+  padding-bottom: 110px;
+ 
+
 }
 
-#patients a:link,
-a:visited,
-#doctors a:link,
-a:visited {
-  background: linear-gradient(#141414, #3a3a3d);
-  color: rgb(236, 236, 236);
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
+#patients a:link, a:visited
+
+{
+    background: linear-gradient(#141414, #3a3a3d);
+    color: rgb(236, 236, 236);
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  #patients a:hover, a:active
+  {
+    background: linear-gradient(#141414, #66667a);
+    color: rgb(236, 236, 236);
 }
 
-#patients a:hover,
-a:active,
-#doctors a:hover,
-a:active {
-  background: linear-gradient(#141414, #232368);
-}
+#patient1 {
 
-#doctors {
-  float: right;
-  display: flex;
-  margin-left: 100px;
-  font-size: 30px;
-  font-weight: bolder;
-  margin-right: 300px;
-  margin-top: 50px;
-  color: rgb(236, 236, 236);
-}
+  margin-right: 120px;
 
+}
+  
 body {
-  min-height: 110vh;
+  
+  background: linear-gradient(to left,#dbdbdb, #ecc8c8);
 
-  color: rgb(255, 255, 255);
 }
+
+.cardh {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  height: 900px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  background: linear-gradient(to right,#dbdbdb, #fafafa);
+  
+  
+  padding: 40px;
+
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+  text-align: center !important;
+}
+
+.cardh p{
+  text-align: left;
+
+}
+
+.group{
+  display: flex;
+  margin: 50px;
+}
+
+.cardh img{
+
+  width: 300px;
+  height: 400px;
+}
+
+.cardh div a{
+
+  color: black;
+
+}
+.arrow {
+  margin-left: 28%;
+}
+
+
+
+
+
 /* for login and register */
 .login_now{
   color: #777 !important;
@@ -363,3 +433,4 @@ body {
 .login, .register{
   margin:0 auto;
 }
+
