@@ -54,9 +54,9 @@
       <div>
         <label for="doctor">Doctor</label>
         <select name="doctor" id="doctor" class="text-dark">
-            <option value="Jay">Andrew Smith</option>
-            <option value="Charles">James Wang</option>
-            <option value="Honey">Sarah Snow</option>           
+            <option value="Andrew Smith">Andrew Smith</option>
+            <option value="James Wang">James Wang</option>
+            <option value="Sarah Snow">Sarah Snow</option>           
         </select>
       </div>
       <br>
@@ -103,14 +103,16 @@
                   </tr>
               </thead>
               <tbody>
+
                   <tr>
-                     {{!-- <td>{{client.first_name}}</td>
+                     <td>{{client.first_name}}</td>
                      <td>{{client.last_name}}</td>
                      <td>{{client.address}}</td>
                      <td>{{client.birth_date}}</td>
-                     <td>{{client.email}}</td> --}}
+                     <td>{{client.email}}</td>
                   </tr>
-                  
+
+           
               </tbody>
             </table>
               
@@ -134,16 +136,16 @@
                   </tr>
               </thead>
               <tbody>
-                {{!-- {{#each doctors}}
+                {{#each appointments}}
                   <tr>
-                      <th scope="row">1</th>
-                      <td>{{appointment.date}}</td>
-                      <td>{{appointment.doctor_id}}</td>
-                      <td>{{appointment.details}}</td>
-                      <td>{{appointment.mode}}</td>
+                      <th scope="row">{{id}}</th>
+                      <td>{{appointment_date}}</td>
+                      <td>{{doctor_name}}</td>
+                      <td>{{details}}</td>
+                      <td>{{appointment_type}}</td>
                   </tr>
                 {{/each}} 
-                 --}}
+                 
               </tbody>
             </table>
           </div>
