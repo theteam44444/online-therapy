@@ -161,7 +161,7 @@ opacity: 1;
 /* style for footer*/
 footer {
   margin-top: 5%;
-  background: linear-gradient(#141414, #3A3A3D);
+  background: #3A3A3D;
   padding: 1% 10%;
   text-align: center;
   width: 100%;
@@ -184,7 +184,7 @@ footer form .name,
   width: 30%;
   align-self: center;
   height: 30px;
-  background-color: #313840;
+  background: #3A3A3D;
   border: none;
   border-bottom: 2px solid #888888;
   font-size: 20px;
@@ -197,14 +197,14 @@ footer form textarea {
   margin-top: 2%;
   border: none;
   border-bottom: 2px solid #888888;
-  background: linear-gradient(#141414, #3A3A3D);
+  background: #3A3A3D;
   font-size: 20px;
   width: 62%;
 }
 footer form .btn {
   color: #888888;
   padding: 10px;
-  background: linear-gradient(#141414, #3A3A3D);
+  background: #3A3A3D;
   border: 2px solid #888888;
   margin-top: 3%;
 }
@@ -329,10 +329,9 @@ section {
 
   /* float: left; */
   display: flex;
-  margin-left: 100px;
+  margin-left: 25%;
   font-size:30px;
   font-weight: bolder;
-  margin-left: 300px;
   padding-bottom: 110px;
  
 
@@ -357,7 +356,7 @@ section {
 
 #patient1 {
 
-  margin-right: 700px;
+  margin-right: 120px;
 
 }
   
@@ -370,7 +369,7 @@ body {
 .cardh {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   max-width: 400px;
-  height: 800px;
+  height: 900px;
   margin: auto;
   text-align: center;
   font-family: arial;
@@ -408,7 +407,9 @@ body {
   color: black;
 
 }
-
+.arrow {
+  margin-left: 28%;
+}
 
 
 
@@ -432,3 +433,4 @@ body {
 .login, .register{
   margin:0 auto;
 }
+
