@@ -27,7 +27,7 @@ async function addAppointmentHandler(event) {
       appointment_date,
       details,
       doctor_name: doctorChosen,
-    //   client_id: req.session.client_id,
+      //   client_id: req.session.client_id,
       appointment_type,
     }),
     headers: {
@@ -35,8 +35,8 @@ async function addAppointmentHandler(event) {
     },
   });
   if (response.ok) {
-    // document.location.replace("/dashboard");
     alert("Appointment has been added");
+    document.location.reload();
   } else {
     alert(response.statusText);
   }

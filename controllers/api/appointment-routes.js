@@ -2,29 +2,29 @@ const router = require("express").Router();
 const { Appointment, Doctor } = require("../../models");
 const auth = require("../../utils/auth");
 
-// router.get("/", (req, res) => {
-//   console.log("GET ALL APPOINTMENT");
-//   Appointment.findAll({
-//     include: [
-//       {
-//         model: Doctor,
+// router.get("/", auth, async (req, res) => {
+//   try {
+//     alert(req.session.client_id);
+//     const data = await Appointment.findAll({
+//       where: {
+//         client_id: req.session.client_id,
 //       },
-//     ],
-//   })
-//     .then((data) => {
-//       res.json(data);
-//     })
-//     .catch((error) => {
-//       res.status(500).json(error);
 //     });
+//     if (data) {
+//       const appointments = data.map((app) => app.get({ plain: true }));
+//       res.render("patient-dashboard", { appointments, loggedIn: true });
+//       res.json(appointments);
+//       console.log(appointments);
+//     }
+//   } catch (error) {
+//     res.status(500).json(error);
+//   }
 // });
 
 router.get("/", async (req, res) => {
   try {
-    console.log("GET ALL APPOINTMENT");
     const appointments = await Appointment.findAll({});
     res.json(appointments);
-
   } catch (error) {
     res.status(500).json(error);
   }
