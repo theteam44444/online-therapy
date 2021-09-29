@@ -3,11 +3,14 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" />
-  {{!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.2.3/flatpickr.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.2.3/themes/dark.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-  <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/dark.css"> --}}
+  <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/dark.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.2.3/flatpickr.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
   <title>Online Therapy</title>
 </head>
   
@@ -23,8 +26,26 @@
       {{!-- <input class="mt-10 mb-5" type="datetime-local" id="dateTime" placeholder="Please select date and time" /> --}}
         <div>
         <label for="appointment-date">Appointment Date:</label>
-          <input class="text-dark" type="datetime-local" id="appointment-date"
+          <input class="text-dark" type="text" id="appointment-date"
           name="appointment-date" value=""> 
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.2.3/flatpickr.js"></script>
+          <script>
+            $("#appointment-date").flatpickr({
+              enableTime: true,
+              minTime: "09:00",
+              maxTime: "17:00",
+              dateFormat: "F, d Y H:i",
+              minDate: "today",
+              maxDate: new Date().fp_incr(30),
+    // disable: [
+    //     function(date) {
+    //         // return true to disable
+    //         return (date.getDay() === 0 || date.getDay() === 6);​
+    //     }
+    // ],
+  });
+          </script>
+           
           </div>
   <br>
       {{!-- <div class="btn-group">
@@ -139,7 +160,8 @@
                 {{#each appointments}}
                   <tr>
                       <th scope="row">{{id}}</th>
-                      <td>{{appointment_date}}</td>
+                     <td>{{format_date_time appointment_date}}</td>
+ 
                       <td>{{doctor_name}}</td>
                       <td>{{details}}</td>
                       <td>{{appointment_type}}</td>
