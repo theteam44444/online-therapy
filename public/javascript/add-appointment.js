@@ -26,8 +26,8 @@ async function addAppointmentHandler(event) {
     body: JSON.stringify({
       appointment_date,
       details,
-      doctor_id: "1",
-      client_id: "1",
+      doctor_name: doctorChosen,
+    //   client_id: req.session.client_id,
       appointment_type,
     }),
     headers: {
