@@ -133,13 +133,14 @@ height: 92vh;
 right: 0;
 left: auto;
 top: 8vh;
-background-color: #4ca1af;
+background: linear-gradient(#141414, #3A3A3D);
 display: flex;
 flex-direction: column;
 align-items: center;
 transform: translateX(100%);
 opacity: 0;
 width: 50%;
+z-index:-1;
 }
 .burger {
 display: block;
@@ -272,6 +273,7 @@ section {
 }
 .developers div img {
   border-radius: 100%;
+  width: 48%;
 }
 
 /* Adi */
