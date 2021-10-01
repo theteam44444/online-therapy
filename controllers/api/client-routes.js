@@ -6,7 +6,6 @@ router.get("/", async (req, res) => {
   try {
     const clients = await Client.findAll({});
     res.json(clients);
-    console.log("clients-b", clients);
   } catch (error) {
     console.log(err);
     res.status(500).json(err);
@@ -32,7 +31,7 @@ router.post("/", (req, res) => {
       });
     })
     .catch((err) => {
-      console.log(err);
+      console.log(err.message);
       res.status(500).json(err);
     });
 });

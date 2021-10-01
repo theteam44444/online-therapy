@@ -3,18 +3,19 @@ const sequelize = require("../config/connection");
 const { Appointment, Client } = require("../models");
 const auth = require("../utils/auth");
 
-router.get("/", (req, res) => {
+router.get("/", auth, (req, res) => {
   Appointment.findAll({
     where: {
       // use the ID from the session
-      email: req.session.email,
+      client_id: req.session.client_id,
     },
-    // details: ["id", "appointment_date", "doctor_id"],
   })
-    .then((dbPostData) => {
+    .then((dbAppointment) => {
       // serialize data before passing to template
-      const appointment = dbPostData.map((item) => item.get({ plain: true }));
-      res.render("patient-dashboard", { appointment, loggedIn: true });
+      const appointment = dbAppointment.map((item) =>
+        item.get({ plain: true })
+      );
+      res.render("client-dashboard", { appointment, loggedIn: true });
     })
     .catch((err) => {
       console.log(err);

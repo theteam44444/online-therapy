@@ -14,7 +14,7 @@ async function loginClientHandler(event) {
       headers: { "Content-Type": "application/json" },
     });
     if (response.ok) {
-      document.location.replace("/patient-dashboard");
+      document.location.replace("/client-dashboard");
     } else {
       alert(response.statusText);
     }
