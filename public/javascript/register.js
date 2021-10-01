@@ -23,7 +23,7 @@ async function signupFormHandler(event) {
     });
 
     if (response.ok) {
-      document.location.replace("/patient-dashboard");
+      document.location.replace("/client-dashboard");
     } else {
       alert(response.statusText);
     }

@@ -23,7 +23,7 @@
         Schedule an Appointment
       </h5>
       
-      {{!-- <input class="mt-10 mb-5" type="datetime-local" id="dateTime" placeholder="Please select date and time" /> --}}
+   <form>
         <div class="mb-3">
         <label for="appointment-date">Appointment Date</label>
           <input class="text-dark col-12" type="text" id="appointment-date"
@@ -47,17 +47,7 @@
           </script>
         </div>
 
-      {{!-- <div class="btn-group">
-        <button class= "btn btn-primary dropdown-toggle mb-5" id="dropdownIssue" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Choose Symptom
-        </button>
-        <div class="dropdown-menu">
-          <button class="dropdown-item" type="button">Marriage Counselling</button>
-          <button class="dropdown-item" type="button">Mental Health</button>
-          <button class="dropdown-item" type="button">Drug Addiction</button>
-        </div>
-      
-      </div> --}}
+
        <div class="mb-3">
         <label for="details">Details</label>
         <select name="details" id="details" class="text-dark col-12">
@@ -80,17 +70,7 @@
              <option value="Alexa">Alexa</option>           
         </select>
       </div>
-    
-      {{!-- <div class="btn-group">
-        <button class= "btn btn-primary dropdown-toggle mb-5" id="dropdownTypeAppointment" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Choose Type of Appointment
-        </button>
-        <div class="dropdown-menu">
-          <button class="dropdown-item" type="button">Zoom Video Call</button>
-          <button class="dropdown-item" type="button">Mobile Phone</button>
-          <button class="dropdown-item" type="button">In-Person</button>
-        </div>
-      </div> --}}
+ 
        <div class="mb-5">
         <label for="appointmentType">Appointment Type</label>
         <select name="appointmentType" id="appointmentType" class="text-dark col-12">
@@ -154,6 +134,7 @@
                       <th scope="col">Doctor Name </th>
                       <th scope="col">Symptom Experiencing</th>
                       <th scope="col">Type of Appointment</th>
+                      <th scope="col"></th>
                   </tr>
               </thead>
               <tbody>
@@ -164,12 +145,12 @@
             </table>
           </div>
         </div>
-
+</form>
       </div>
 
     </main>
   </div>
-  <script src="/javascript/add-appointment.js"></script>
+  <script src="/javascript/appointment.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.2.3/flatpickr.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
