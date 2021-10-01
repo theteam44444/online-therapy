@@ -37,24 +37,4 @@ router.post("/", async (req, res) => {
   }
 });
 
-router.delete("/:id", auth, (req, res) => {
-  console.log("PARAMETER,", req.params.id);
-  Appointment.destroy({
-    where: {
-      id: req.params.id,
-    },
-  })
-    .then((dbAppointment) => {
-      if (!dbAppointment) {
-        res.status(404).json({ message: "Error deleting the appointment!" });
-        return;
-      }
-      res.json(dbAppointment);
-    })
-    .catch((err) => {
-      console.log(err);
-      res.status(500).json(err);
-    });
-});
-
 module.exports = router;
