@@ -151,7 +151,7 @@ a:hover.nav-links:not(.active) {
   }
   .right a {
     opacity: 0;
-    margin-bottom: 35%;
+    margin-bottom: 25%;
   }
   .right a:hover {
     padding: 0 100%;
