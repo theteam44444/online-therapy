@@ -135,7 +135,7 @@ a:hover.nav-links:not(.active) {
     height: 92vh;
     right: 0;
     left: auto;
-    top: 8vh;
+    top: 4em;
     background: linear-gradient(#141414, #3a3a3d);
     display: flex;
     flex-direction: column;
@@ -151,7 +151,7 @@ a:hover.nav-links:not(.active) {
   }
   .right a {
     opacity: 0;
-    margin-bottom: 10px;
+    margin-bottom: 35%;
   }
   .right a:hover {
     padding: 0 100%;
