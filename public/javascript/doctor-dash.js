@@ -1,7 +1,7 @@
 async function doctorDashboardHandler(event) {
     event.preventDefault();
     const listOfPatients = document.querySelector("#client-list").value;
-    const appointmentList = document.querySelector("#applintment-list").value;
+    const appointmentList = document.querySelector("#appointment-list").value;
     const doctorsList = document.querySelector("#doctors-list").value;
   
     const response = await fetch(`/api/appointments`, {
