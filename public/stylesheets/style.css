@@ -281,10 +281,14 @@ section {
 
 /* Adi */
 #hero {
-  padding: 20px 200px 0px;
-  font-size: 50px;
+  margin:0 10%;
   font-weight: bolder;
   text-align: center;
+}
+#hero h1{
+  font-weight: bold;
+  padding-top: 5%;
+  font-size: 3em;
 }
 
 #hero2 {
@@ -294,9 +298,10 @@ section {
 }
 
 #herop {
-  font-size: 20px;
+  font-size: 1.5em;
   font-weight: bolder;
   text-align: center;
+  margin-top: 5%;
 }
 
 #heropi {
@@ -314,16 +319,14 @@ section {
   background-attachment: fixed;
 }
 
-#patients {
-  /* float: left; */
+#buttons {
   display: flex;
-  margin-left: 25%;
   font-size: 30px;
   font-weight: bolder;
   padding-bottom: 110px;
 }
 
-#patients a:link,
+#buttons a:link,
 a:visited {
   background: linear-gradient(#141414, #3a3a3d);
   color: rgb(236, 236, 236);
@@ -333,14 +336,20 @@ a:visited {
   display: inline-block;
 }
 
-#patients a:hover,
+#buttons a:hover,
 a:active {
   background: linear-gradient(#141414, #66667a);
   color: rgb(236, 236, 236);
 }
 
-#patient1 {
-  margin-right: 120px;
+#patient {
+  margin-right: 10%;
+  font-size: 1em;
+  margin-left: auto;
+}
+#doctor{
+  font-size: 1em;
+  margin-right: auto;
 }
 
 body {
@@ -383,7 +392,21 @@ body {
   color: black;
 }
 .arrow {
-  margin-left: 28%;
+  display: flex;
+}
+.arrow-left{
+  width: 14rem; 
+  height: 14rem;
+  background:transparent;
+  margin-left: auto;
+  margin-right: 15%;
+}
+.arrow-right{
+  background:transparent;
+
+  width: 14rem; 
+  height: 14rem;
+  margin-right: auto;
 }
 
 /* for login and register */
@@ -404,4 +427,12 @@ body {
 .login,
 .register {
   margin: 0 auto;
+}
+
+/* main animation */
+.main-animation{
+  margin: 0 auto; 
+  width: 15rem; 
+  height: 15rem;
+  background:transparent;
 }
