@@ -18,7 +18,7 @@ router.get("/login", (req, res) => {
 
 router.get("/doctors-login", (req, res) => {
   if (req.session.loggedIn) {
-    res.redirect("/");
+    res.redirect("/doctors-dash");
     return;
   }
   res.render("doctors-login");

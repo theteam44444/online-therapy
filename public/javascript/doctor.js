@@ -1,7 +1,9 @@
 async function loginDoctorHandler(event) {
     event.preventDefault();
+    
     const email = document.querySelector("#email-doctor").value.trim();
     const password = document.querySelector("#password-doctor").value.trim();
+    console.log('login', {email, password});
     if (email && password) {
         const response = await fetch("/api/doctors/login", {
             method: "POST",

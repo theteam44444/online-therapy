@@ -106,13 +106,15 @@ router.delete("/:id", async (req, res) => {
 // login route
 
 router.post("/login", async (req, res) => {
+  console.log('doctor-routes ===', req.body.email)
+  const {email} = req.body
   try {
     const dbDoctorData = await Doctor.findOne({
       where: {
         email: req.body.email,
       },
     });
-    console.log("email is ", email);
+    console.log("email is ===", dbDoctorData);
     if (!email) {
       res.status(404).json({ message: "Wrong email/password" });
       return;
@@ -127,8 +129,10 @@ router.post("/login", async (req, res) => {
       req.session.email = dbDoctorData.email;
       req.session.loggedIn = true;
       res.json({ doctor: dbDoctorData, message: "You are now logged in!" });
+      // res.redirect('/')
     });
   } catch (error) {
+    console.log('err message ===', error)
     res.status(500).json(error);
   }
 });
