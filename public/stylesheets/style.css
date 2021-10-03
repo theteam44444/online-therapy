@@ -1,5 +1,13 @@
 :root {
   --danger-color: #dc3545;
+  --white-color: #fff;
+  --darkgray-color: #444;
+  --mediumgray-color: #888888;
+  --lightmedgray-color: #777;
+  --lightgray-color: #ddd;
+  --footer-bgcolor: #3a3a3d;
+  --footer-btn: #66667a;
+  --nav-gradient: #141414;
 }
 * {
   margin: 0;
@@ -23,8 +31,8 @@ body {
   z-index: 1;
 }
 #navigation {
-  background: linear-gradient(#141414, #3a3a3d);
-  color: white;
+  background: linear-gradient(var(--nav-gradient), var(--footer-bgcolor));
+  color: var(--white-color);
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
   font-family: "Saira Semi Condensed", sans-serif;
   height: 4em;
@@ -50,14 +58,14 @@ h1.logo {
   font-weight: 300;
   font-size: 1.75em;
   line-height: 2em;
-  color: #fff;
+  color: var(--white-color);
 }
 h1.logo a,
 a:active,
 a:hover,
 a:visited {
   text-decoration: none;
-  color: #fff;
+  color: var(--white-color);
 }
 .nav-links {
   text-transform: uppercase;
@@ -69,7 +77,7 @@ a:link,
 a:visited,
 a:active {
   text-decoration: none;
-  color: white;
+  color: var(--white-color);
 }
 a:hover {
   text-decoration: underline;
@@ -87,12 +95,12 @@ a:hover {
   display: inline-block;
 }
 .nav-links {
-  color: #777;
+  color: var(--lightmedgray-color);
   text-decoration: none;
 }
 a:hover.nav-links:not(.active) {
-  color: #444;
-  background: #ddd;
+  color: var(--darkgray-color);
+  background: var(--lightgray-color);
   text-decoration: none;
 }
 .burger {
@@ -102,7 +110,7 @@ a:hover.nav-links:not(.active) {
 .burger div {
   width: 25px;
   height: 3px;
-  background-color: white;
+  background-color: var(--white-color);
   margin: 5px;
   border-radius: 1px;
   transition: all 0.3s ease;
@@ -137,7 +145,7 @@ a:hover.nav-links:not(.active) {
     right: 0;
     left: auto;
     top: 4em;
-    background: linear-gradient(#141414, #3a3a3d);
+    background: linear-gradient(var(--nav-gradient), var(--footer-bgcolor));
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -166,7 +174,7 @@ a:hover.nav-links:not(.active) {
 /* style for footer*/
 footer {
   margin-top: 5%;
-  background: #3a3a3d;
+  background: var(--footer-bgcolor);
   padding: 1% 10%;
   text-align: center;
   width: 100%;
@@ -175,7 +183,7 @@ footer {
 }
 footer h3 {
   text-align: center;
-  color: #888888;
+  color: var(--mediumgray-color);
   font-family: "Koh Santepheap", cursive;
   font-family: "Playfair Display", serif;
   font-size: 2.5em;
@@ -189,9 +197,9 @@ footer form .name,
   width: 30%;
   align-self: center;
   height: 30px;
-  background: #3a3a3d;
+  background: var(--footer-bgcolor);
   border: none;
-  border-bottom: 2px solid #888888;
+  border-bottom: 2px solid var(--mediumgray-color);
   font-size: 20px;
 }
 .name {
@@ -201,20 +209,20 @@ footer form textarea {
   align-self: center;
   margin-top: 2%;
   border: none;
-  border-bottom: 2px solid #888888;
-  background: #3a3a3d;
+  border-bottom: 2px solid var(--mediumgray-color);
+  background: var(--footer-bgcolor);
   font-size: 20px;
   width: 62%;
 }
 footer form .btn {
-  color: #888888;
+  color: var(--mediumgray-color);
   padding: 10px;
-  background: #3a3a3d;
-  border: 2px solid #888888;
+  background: var(--footer-bgcolor);
+  border: 2px solid var(--mediumgray-color);
   margin-top: 3%;
 }
 .details {
-  color: #888888;
+  color: var(--mediumgray-color);
   text-align: center;
   display: flex;
   align-items: center;
@@ -222,16 +230,16 @@ footer form .btn {
   margin-top: 10px;
 }
 .details a {
-  color: #888888;
+  color: var(--mediumgray-color);
 }
 .btn:hover {
-  background-color: #888888;
+  background-color: var(--mediumgray-color);
   color: #313840;
 }
 .name,
 .email,
 .message {
-  color: white;
+  color: var(--white-color);
 }
 .name,
 .email,
@@ -240,7 +248,7 @@ footer form .btn {
 }
 .details a:hover {
   text-decoration: none;
-  color: #888888;
+  color: var(--mediumgray-color);
 }
 @media screen and (max-width: 700px) {
   .name,
@@ -282,11 +290,11 @@ section {
 
 /* Adi */
 #hero {
-  margin:0 10%;
+  margin: 0 10%;
   font-weight: bolder;
   text-align: center;
 }
-#hero h1{
+#hero h1 {
   font-weight: bold;
   padding-top: 5%;
   font-size: 3em;
@@ -329,7 +337,7 @@ section {
 
 #buttons a:link,
 a:visited {
-  background: linear-gradient(#141414, #3a3a3d);
+  background: linear-gradient(var(--nav-gradient), var(--footer-bgcolor));
   color: rgb(236, 236, 236);
   padding: 10px 20px;
   text-align: center;
@@ -339,7 +347,7 @@ a:visited {
 
 #buttons a:hover,
 a:active {
-  background: linear-gradient(#141414, #66667a);
+  background: linear-gradient(var(--nav-gradient), var(--footer-btn));
   color: rgb(236, 236, 236);
 }
 
@@ -348,7 +356,7 @@ a:active {
   font-size: 1em;
   margin-left: auto;
 }
-#doctor{
+#doctor {
   font-size: 1em;
   margin-right: auto;
 }
@@ -356,7 +364,7 @@ a:active {
 body {
   background: linear-gradient(to left, #dbdbdb, #ecc8c8);
 }
-.group{
+.group {
   display: flex;
   align-content: center;
   width: 100%;
@@ -368,14 +376,13 @@ body {
   font-family: arial;
   background: linear-gradient(to right, #dbdbdb, #fafafa);
   padding: 2%;
-  margin:5% auto;
-
+  margin: 5% auto;
 }
-.cardh img{
-  width:16rem;
-  height:20rem ;
+.cardh img {
+  width: 16rem;
+  height: 20rem;
 }
-.links{
+.links {
   font-size: 20px;
 }
 
@@ -389,24 +396,23 @@ body {
   text-align: left;
 }
 
-
 .cardh div a {
   color: black;
 }
 .arrow {
   display: flex;
 }
-.arrow-left{
-  width: 14rem; 
+.arrow-left {
+  width: 14rem;
   height: 14rem;
-  background:transparent;
+  background: transparent;
   margin-left: auto;
   margin-right: 15%;
 }
-.arrow-right{
-  background:transparent;
+.arrow-right {
+  background: transparent;
 
-  width: 14rem; 
+  width: 14rem;
   height: 14rem;
   margin-right: auto;
 }
@@ -432,26 +438,28 @@ body {
 }
 
 /* main animation */
-.main-animation{
-  margin: 0 auto; 
-  width: 15rem; 
+.main-animation {
+  margin: 0 auto;
+  width: 15rem;
   height: 15rem;
-  background:transparent;
+  background: transparent;
 }
 
-@media  screen and (max-width:1100px){
-  .cardh img{
-    width:14rem;
-    height:18rem ;
+@media screen and (max-width: 1100px) {
+  .cardh img {
+    width: 14rem;
+    height: 18rem;
   }
 }
-@media screen and (max-width:320px){
-  .arrow-left , .arrow-right{
-    width:5rem;
-    height:5rem;
+@media screen and (max-width: 320px) {
+  .arrow-left,
+  .arrow-right {
+    width: 5rem;
+    height: 5rem;
   }
-  #doctor, #patient{
+  #doctor,
+  #patient {
     font-size: 0.5em;
-    padding:5px 10px !important;
+    padding: 5px 10px !important;
   }
 }
