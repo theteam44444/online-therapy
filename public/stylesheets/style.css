@@ -291,12 +291,13 @@ section {
 /* Adi */
 #hero {
   margin: 0 10%;
+  padding: 5% 0;
   font-weight: bolder;
   text-align: center;
 }
 #hero h1 {
   font-weight: bold;
-  padding-top: 5%;
+  /* padding-top: 5%; */
   font-size: 3em;
 }
 
@@ -451,7 +452,7 @@ body {
     height: 18rem;
   }
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 375px) {
   .arrow-left,
   .arrow-right {
     width: 5rem;
@@ -462,4 +463,9 @@ body {
     font-size: 0.5em;
     padding: 5px 10px !important;
   }
+  .arrow-left, .arrow-right {
+    width: 2rem;
+    height: 2rem;
+  }
 }
+

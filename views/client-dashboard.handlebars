@@ -1,8 +1,8 @@
-
 <head>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.2.3/flatpickr.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.2.3/themes/dark.css">
@@ -13,139 +13,142 @@
 
   <title>Online Therapy</title>
 </head>
-  
+
 <body>
   <div class="row min-vh-100 no-gutters position-sticky">
     <div class="col-12 col-lg-3 bg-dark text-light sticky-top d-flex flex-column p-4 p-lg-3">
-     <form class="createAppointment">
-      <h5 class="text-center mb-4">
-      <span class="oi oi-task d-inline d-lg-none"></span>
-        Schedule an Appointment
-      </h5>
-      
-   <form>
-        <div class="mb-3">
-        <label for="appointment-date">Appointment Date</label>
-          <input class="text-dark col-12" type="text" id="appointment-date"
-          name="appointment-date" value=""> 
-                    <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.2.3/flatpickr.js"></script>
-          <script>
-            $("#appointment-date").flatpickr({
-              enableTime: true,
-              minTime: "09:00",
-              maxTime: "17:00",
-              dateFormat: "F, d Y H:i",
-              minDate: "today",
-              maxDate: new Date().fp_incr(30),
-    // disable: [
-    //     function(date) {
-    //         // return true to disable
-    //         return (date.getDay() === 0 || date.getDay() === 6);​
-    //     }
-    // ],
-  });
-          </script>
-        </div>
+      <form class="createAppointment">
+        <h5 class="text-center mb-4">
+          <span class="oi oi-task d-inline d-lg-none"></span>
+          Schedule an Appointment
+        </h5>
+
+        <form>
+          <div class="mb-3">
+            <label for="appointment-date">Appointment Date</label>
+            <input class="text-dark col-12" type="text" id="appointment-date" name="appointment-date" value="">
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.2.3/flatpickr.js"></script>
+            <script>
+              $("#appointment-date").flatpickr({
+                enableTime: true,
+                minTime: "09:00",
+                maxTime: "17:00",
+                dateFormat: "F, d Y H:i",
+                minDate: "today",
+                maxDate: new Date().fp_incr(30),
+                // disable: [
+                //     function(date) {
+                //         // return true to disable
+                //         return (date.getDay() === 0 || date.getDay() === 6);​
+                //     }
+                // ],
+              });
+            </script>
+          </div>
 
 
-       <div class="mb-3">
-        <label for="details">Details</label>
-        <select name="details" id="details" class="text-dark col-12">
-            <option value="Behavioural">Behavioural</option>
-            <option value="Sports">Sports</option>
-            <option value="Drug Addiction">Drug Addiction</option> 
-            <option value="Nutritional">Nutritional</option> 
-            <option value="Social">Social</option> 
-        </select>
-      </div>
+          <div class="mb-3">
+            <label for="details">Details</label>
+            <select name="details" id="details" class="text-dark col-12">
+              <option disabled selected value> -- select an option -- </option>
+              <option value="Behavioural">Behavioural</option>
+              <option value="Sports">Sports</option>
+              <option value="Drug Addiction">Drug Addiction</option>
+              <option value="Nutritional">Nutritional</option>
+              <option value="Social">Social</option>
+            </select>
+          </div>
 
-       <div class="mb-3">
-        <label for="doctor">Doctor</label>
-        <select name="doctor" id="doctor" class="text-dark col-12">
-            <option value="Stephen Strange">Stephen Strange</option>
-            <option value="Joker">Joker</option>
-            <option value="Shultz">Shultz</option>           
-            <option value="Angela Ziegler">Angela Ziegler</option>           
-            <option value="Gordon Freeman">Gordon Freeman</option>    
-             <option value="Alexa">Alexa</option>           
-        </select>
-      </div>
- 
-       <div class="mb-5">
-        <label for="appointmentType">Appointment Type</label>
-        <select name="appointmentType" id="appointmentType" class="text-dark col-12">
-            <option value="Zoom Video Call">Zoom Video Call</option>
-            <option value="Mobile Phone">Mobile Phone</option>
-            <option value="In-Person">In-Person</option>             
-        </select>
-      </div>
-     
-      <button class="btn btn-success col-12" id="createAppointments" type="submit" >SAVE</button>
-</form>
+          <div class="mb-3">
+            <label for="doctor">Doctor</label>
+            <select name="doctor" id="doctor" class="text-dark col-12">
+              <option disabled selected value> -- select an option -- </option>
+              <option value="Stephen Strange">Stephen Strange</option>
+              <option value="Joker">Joker</option>
+              <option value="Shultz">Shultz</option>
+              <option value="Angela Ziegler">Angela Ziegler</option>
+              <option value="Gordon Freeman">Gordon Freeman</option>
+              <option value="Alexa">Alexa</option>
+            </select>
+          </div>
+
+          <div class="mb-5">
+            <label for="appointmentType">Appointment Type</label>
+            <select name="appointmentType" id="appointmentType" class="text-dark col-12">
+              <option disabled selected value> -- select an option -- </option>
+              <option value="Zoom Video Call">Zoom Video Call</option>
+              <option value="Mobile Phone">Mobile Phone</option>
+              <option value="In-Person">In-Person</option>
+            </select>
+          </div>
+
+          <button class="btn btn-success col-12" id="createAppointments" type="submit">SAVE</button>
+        </form>
     </div>
 
 
     <main class="col-12 col-lg-9 d-flex flex-column">
 
-      <div class="m-5 row justify-content-around">
+      {{!-- <div class="m-5 row justify-content-around">
         <div class="col-12">
-          <div class = "card mb-3">
-            <h4 class = "card-header bg-dark text-light">
-              Client Personal  Details
+          <div class="card mb-3">
+            <h4 class="card-header bg-dark text-light">
+              Client Personal Details
             </h4>
             <table class="table">
               <thead>
-                  <tr>
-                      <th scope="col">First Name </th>
-                      <th scope="col">Last Name </th>
-                      <th scope="col">Current Address</th>
-                      <th scope="col">Date of Birth</th>
-                      <th scope="col">Email Address</th>
-                  </tr>
+                <tr>
+                  <th scope="col">First Name </th>
+                  <th scope="col">Last Name </th>
+                  <th scope="col">Current Address</th>
+                  <th scope="col">Date of Birth</th>
+                  <th scope="col">Email Address</th>
+                </tr>
               </thead>
               <tbody>
 
-                  <tr>
-                     <td>{{client.first_name}}</td>
-                     <td>{{client.last_name}}</td>
-                     <td>{{client.address}}</td>
-                     <td>{{client.birth_date}}</td>
-                     <td>{{client.email}}</td>
-                  </tr>
+                <tr>
+                  <td>{{client.first_name}}</td>
+                  <td>{{client.last_name}}</td>
+                  <td>{{client.address}}</td>
+                  <td>{{client.birth_date}}</td>
+                  <td>{{client.email}}</td>
+                </tr> --}}
                 {{!-- {{> client-info}} --}}
-           
+
+                {{!--
               </tbody>
             </table>
-              
-            
+
+
           </div>
-        </div>
+        </div> --}}
 
         <div class="col-12">
-          <div class = "card">
-            <h4 class = "card-header bg-dark text-light">
+          <div class="card mt-5">
+            <h4 class="card-header bg-dark text-light">
               Existing Appointments
             </h4>
             <table class="table">
               <thead>
-                  <tr>
-                      <th scope="col">#</th>
-                      <th scope="col">Date/Time </th>
-                      <th scope="col">Doctor Name </th>
-                      <th scope="col">Symptom Experiencing</th>
-                      <th scope="col">Type of Appointment</th>
-                      <th scope="col"></th>
-                  </tr>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Date/Time </th>
+                  <th scope="col">Doctor Name </th>
+                  <th scope="col">Symptom Experiencing</th>
+                  <th scope="col">Type of Appointment</th>
+                  <th scope="col"></th>
+                </tr>
               </thead>
               <tbody>
-               
+
                 {{> appointment-info}}
-                 
+
               </tbody>
             </table>
           </div>
         </div>
-</form>
+        </form>
       </div>
 
     </main>
@@ -158,12 +161,12 @@
   <script src="https://cdn.jsdelivr.net/npm/jquery-ui-touch-punch@0.2.3/jquery.ui.touch-punch.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.2.3/flatpickr.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-  
+
 
 </body>
 
