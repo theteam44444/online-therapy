@@ -281,7 +281,7 @@ section {
 
 /* Adi */
 #hero {
-  padding: 20px 200px 0px;
+  padding: 20px 200px 300px 200px;
   font-size: 50px;
   font-weight: bolder;
   text-align: center;
@@ -347,7 +347,7 @@ body {
   background: linear-gradient(to left, #dbdbdb, #ecc8c8);
 }
 
-.cardh {
+.doctors {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   max-width: 400px;
   height: 900px;
@@ -365,7 +365,7 @@ body {
   text-align: center !important;
 }
 
-.cardh p {
+.doctors p {
   text-align: left;
 }
 
@@ -374,12 +374,12 @@ body {
   margin: 50px;
 }
 
-.cardh img {
+.doctors img {
   width: 300px;
   height: 400px;
 }
 
-.cardh div a {
+.doctors div a {
   color: black;
 }
 .arrow {
