@@ -146,11 +146,11 @@ a:hover.nav-links:not(.active) {
     left: auto;
     top: 4em;
     background: linear-gradient(var(--nav-gradient), var(--footer-bgcolor));
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     transform: translateX(100%);
-    opacity: 0;
+    /* opacity: 0; */
     width: 50%;
     z-index: -1;
   }
@@ -168,7 +168,7 @@ a:hover.nav-links:not(.active) {
 }
 .nav-active {
   transform: translateX(0);
-  opacity: 1;
+  display: flex;
 }
 
 /* style for footer*/
