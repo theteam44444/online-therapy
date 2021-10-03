@@ -38,9 +38,10 @@
         <div class="right">
           <a href="/" class="nav-links">Home</a>
           <a href="/about" class="nav-links">About</a>
+          <a href="#contact" class="nav-links">Contact</a>
           {{#if loggedIn}}
-            <a id="logout" href="#" class="nav-links">Logout</a>
             <a href="/client-dashboard" class="nav-links">Dashboard</a>
+            <a id="logout" href="#" class="nav-links">Logout</a>
           {{else}}
             <a class="nav-links" href="/login">Login</a>
           {{/if}}
