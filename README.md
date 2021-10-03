@@ -2,7 +2,7 @@
 
 Group 4, Project 2
 
-This application is a website for medical services, for use by Patients and Doctors
+This application is a website for medical services, for use by Patients and Doctors.
 
 As a client, I can register myself into the portal. Then I can set up appointments with the doctor of my choosing, and specify the nature of my medical request.
 
