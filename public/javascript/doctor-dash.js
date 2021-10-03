@@ -4,7 +4,7 @@ async function doctorDashboardHandler(event) {
     const appointmentList = document.querySelector("#appointment-list").value;
     const doctorsList = document.querySelector("#doctors-list").value;
   
-    const response = await fetch(`/api/appointments`, {
+    const response = await fetch(`/api/doctors`, {
       method: "POST",
       body: JSON.stringify({
         appointment_date,
